@@ -1,0 +1,49 @@
+
+
+
+CREATE TABLE CPO_ORGANISATION (/* for entity at.hafina.coupon.stamm.Organisation*/ 
+ ID NUMBER  (9) /* id */,
+ NAME VARCHAR2  (50) /* name */,
+ EMAIL VARCHAR2  (50) /* email */,
+ TEL VARCHAR2  (50) /* tel */,
+ STRASSE VARCHAR2  (50) /* strasse */,
+ HAUSNUMMER VARCHAR2  (50) /* hausnummer */,
+ ORT VARCHAR2  (50) /* ort */,
+ POSTLEITZAHL NUMBER  (9) /* postleitzahl */,
+ BUNDESLAND VARCHAR2  (50) /* bundesland */,
+ LAND VARCHAR2  (50) /* land */,
+ STATUS VARCHAR2  (5) /* status */,
+ CREATEDAT DATE /* createdAt */,
+ CREATEDBY NUMBER  (9) /* createdBy */,
+ MODIFIEDAT DATE /* modifiedAt */,
+ MODIFIEDBY NUMBER  (9) /* modifiedBy */
+, TCN NUMBER (9) NOT NULL
+); 
+CREATE UNIQUE INDEX I_CPO_ORGANISATION_ID ON CPO_ORGANISATION (ID);
+CREATE SEQUENCE S_CPT_ORGANISATION START WITH 1 MINVALUE 1 MAXVALUE 999999999 NOCYCLE CACHE 20 ORDER;
+
+
+CREATE TABLE CPO_PERSON (/* for entity at.hafina.coupon.stamm.Person*/ 
+ ID NUMBER  (9) /* id */,
+ TITEL VARCHAR2  (50) /* titel */,
+ VORNAME VARCHAR2  (50) /* vorname */,
+ NACHNAME VARCHAR2  (50) /* nachname */,
+ EMAIL VARCHAR2  (50) /* email */,
+ TEL VARCHAR2  (50) /* tel */,
+ STRASSE VARCHAR2  (50) /* strasse */,
+ HAUSNUMMER VARCHAR2  (50) /* hausnummer */,
+ ORT VARCHAR2  (50) /* ort */,
+ POSTLEITZAHL NUMBER  (9) /* postleitzahl */,
+ BUNDESLAND VARCHAR2  (50) /* bundesland */,
+ LAND VARCHAR2  (50) /* land */,
+ ORGANISATION NUMBER  (9) /* id */,
+ STATUS VARCHAR2  (5) /* status */,
+ CREATEDAT DATE /* createdAt */,
+ CREATEDBY NUMBER  (9) /* createdBy */,
+ MODIFIEDAT DATE /* modifiedAt */,
+ MODIFIEDBY NUMBER  (9) /* modifiedBy */
+, TCN NUMBER (9) NOT NULL
+); 
+CREATE UNIQUE INDEX I_CPO_PERSON_ID ON CPO_PERSON (ID);
+CREATE INDEX I_CPO_PERSON_ORGANISATION ON CPO_PERSON (ORGANISATION);
+CREATE SEQUENCE S_CPT_PERSON START WITH 1 MINVALUE 1 MAXVALUE 999999999 NOCYCLE CACHE 20 ORDER;
