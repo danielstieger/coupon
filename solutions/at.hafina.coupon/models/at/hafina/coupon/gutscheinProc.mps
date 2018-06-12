@@ -21,8 +21,12 @@
       </concept>
     </language>
     <language id="ec097fca-5b84-41f2-847d-6a5690cae277" name="org.modellwerkstatt.objectflow">
+      <concept id="1881524139086941829" name="org.modellwerkstatt.objectflow.structure.State" flags="ng" index="10xgET">
+        <reference id="1881524139086941858" name="status" index="10xgEu" />
+      </concept>
       <concept id="7192042020163999185" name="org.modellwerkstatt.objectflow.structure.Process" flags="ng" index="3ugp7d">
         <reference id="1881524139087681829" name="statusField" index="10I5Op" />
+        <child id="1881524139086941830" name="states" index="10xgEU" />
       </concept>
       <concept id="7192042020164640431" name="org.modellwerkstatt.objectflow.structure.ContainerParameter" flags="ng" index="3ulXEN" />
       <concept id="7192042020164640426" name="org.modellwerkstatt.objectflow.structure.Container" flags="ng" index="3ulXEQ">
@@ -38,6 +42,21 @@
   <node concept="3ugp7d" id="7Id2iZPcBNG">
     <property role="TrG5h" value="GutscheinProzess" />
     <ref role="10I5Op" to="rtx2:7Id2iZPdWhM" resolve="status" />
+    <node concept="10xgET" id="58L_rBVr6gs" role="10xgEU">
+      <ref role="10xgEu" to="rtx2:7Id2iZPcBOl" resolve="created" />
+    </node>
+    <node concept="10xgET" id="58L_rBVr6gu" role="10xgEU">
+      <ref role="10xgEu" to="rtx2:7Id2iZPcBOn" resolve="for_sale" />
+    </node>
+    <node concept="10xgET" id="58L_rBVr6gx" role="10xgEU">
+      <ref role="10xgEu" to="rtx2:7Id2iZPcBOq" resolve="out_active" />
+    </node>
+    <node concept="10xgET" id="58L_rBVr6g_" role="10xgEU">
+      <ref role="10xgEu" to="rtx2:7Id2iZPcBOu" resolve="out_locked" />
+    </node>
+    <node concept="10xgET" id="58L_rBVr6gE" role="10xgEU">
+      <ref role="10xgEu" to="rtx2:7Id2iZPcBOz" resolve="closed" />
+    </node>
     <node concept="3ulXEN" id="7Id2iZPcBNH" role="3ulXEL">
       <property role="TrG5h" value="gutschein" />
       <node concept="3uibUv" id="7Id2iZPcBNJ" role="1tU5fm">

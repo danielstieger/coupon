@@ -187,7 +187,7 @@
         <node concept="2CJ4$C" id="4LC0Y0L2paA" role="2CJ4_l">
           <property role="TrG5h" value="maxPoolSize" />
           <node concept="Xl_RD" id="4LC0Y0L2paB" role="2CaGCA">
-            <property role="Xl_RC" value="1" />
+            <property role="Xl_RC" value="2" />
           </node>
         </node>
         <node concept="2CJ4$C" id="4LC0Y0L2paC" role="2CJ4_l">

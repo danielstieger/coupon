@@ -12,6 +12,7 @@
     <import index="rtx2" ref="r:f2abaf7c-b7b5-461d-a351-9ebf9227ede8(at.hafina.coupon.gutschein)" />
     <import index="x60x" ref="r:ba343f80-f4e3-428e-9c3a-67fed1758531(at.hafina.coupon.stamm)" />
     <import index="5htd" ref="r:d1497da2-b9f0-4944-9bfe-36cfd432b158(at.hafina.coupon.gutscheinProc)" />
+    <import index="es3z" ref="r:9198be85-5ede-4b75-9739-3e6da45d3552(at.hafina.coupon.configbase)" />
     <import index="w7gk" ref="r:22abd22f-3c78-4514-b7c6-da1d82c38fe2(org.modellwerkstatt.manmap.solution.manmapRT)" implicit="true" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="guwi" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.io(JDK/)" implicit="true" />
@@ -35,6 +36,7 @@
       <concept id="1070533707846" name="jetbrains.mps.baseLanguage.structure.StaticFieldReference" flags="nn" index="10M0yZ">
         <reference id="1144433057691" name="classifier" index="1PxDUh" />
       </concept>
+      <concept id="1070534058343" name="jetbrains.mps.baseLanguage.structure.NullLiteral" flags="nn" index="10Nm6u" />
       <concept id="1070534760951" name="jetbrains.mps.baseLanguage.structure.ArrayType" flags="in" index="10Q1$e">
         <child id="1070534760952" name="componentType" index="10Q1$1" />
       </concept>
@@ -91,17 +93,50 @@
       <concept id="1146644623116" name="jetbrains.mps.baseLanguage.structure.PrivateVisibility" flags="nn" index="3Tm6S6" />
     </language>
     <language id="ec097fca-5b84-41f2-847d-6a5690cae277" name="org.modellwerkstatt.objectflow">
-      <concept id="478945708906770773" name="org.modellwerkstatt.objectflow.structure.OFXConfig" flags="ng" index="2CG7Z0" />
+      <concept id="3526396426289727497" name="org.modellwerkstatt.objectflow.structure.OFXConfigPropOverwrite" flags="ng" index="26L8Vk">
+        <reference id="3526396426289727551" name="property" index="26L8Vy" />
+        <child id="3526396426289727549" name="value" index="26L8Vw" />
+      </concept>
+      <concept id="3875131616719432922" name="org.modellwerkstatt.objectflow.structure.CommandCallBasis" flags="ng" index="2_HltQ">
+        <reference id="3875131616719438756" name="command" index="2_Hrw8" />
+        <reference id="3875131616719438755" name="process" index="2_Hrwf" />
+        <child id="3875131616719439029" name="actualArgument" index="2_HrWp" />
+      </concept>
+      <concept id="478945708906770773" name="org.modellwerkstatt.objectflow.structure.OFXConfig" flags="ng" index="2CG7Z0">
+        <property id="3526396426252206723" name="lastUpdated" index="2320hu" />
+        <child id="478945708906902061" name="elements" index="2CGBMS" />
+      </concept>
+      <concept id="478945708907022307" name="org.modellwerkstatt.objectflow.structure.OFXConfigInclude" flags="ng" index="2CJ4_Q">
+        <reference id="478945708907022310" name="element" index="2CJ4_N" />
+        <child id="478945708912703715" name="properties" index="2CPvpQ" />
+      </concept>
+      <concept id="478945708907003617" name="org.modellwerkstatt.objectflow.structure.OFXConfigConstructorArg" flags="ng" index="2CJf1O">
+        <child id="478945708935709196" name="value" index="2DqwMp" />
+        <child id="478945708935709194" name="type" index="2DqwMv" />
+      </concept>
+      <concept id="478945708907003466" name="org.modellwerkstatt.objectflow.structure.OFXConfigInstance" flags="ng" index="2CJf3v">
+        <child id="478945708907022272" name="elements" index="2CJ4_l" />
+        <child id="478945708907003567" name="className" index="2CJf0U" />
+      </concept>
+      <concept id="478945708906907667" name="org.modellwerkstatt.objectflow.structure.OFXConfigSection" flags="ng" index="2CJoq6">
+        <child id="478945708906994221" name="elements" index="2CJdiS" />
+      </concept>
+      <concept id="478945708912703702" name="org.modellwerkstatt.objectflow.structure.OFXConfigEmpty" flags="ng" index="2CPvp3" />
       <concept id="4779674245164262437" name="org.modellwerkstatt.objectflow.structure.UserEnvironmentParameter" flags="ng" index="2Rjrh3" />
       <concept id="7192042020164640430" name="org.modellwerkstatt.objectflow.structure.ContainerVariable" flags="ng" index="3ulXEM" />
       <concept id="7192042020165155288" name="org.modellwerkstatt.objectflow.structure.ContainerVariableReference" flags="ng" index="3urNR4" />
     </language>
     <language id="64adc67c-5fcf-45f5-82db-6a6771963d93" name="org.modellwerkstatt.dataux">
+      <concept id="2781909770750560564" name="org.modellwerkstatt.dataux.structure.AppTile" flags="ng" index="2$ntO6">
+        <child id="2781909770750560899" name="action" index="2$ntUL" />
+      </concept>
       <concept id="7784207101901652180" name="org.modellwerkstatt.dataux.structure.AppUiModule" flags="ng" index="2MVcZ9">
         <reference id="1335996842166433049" name="configuration" index="2WPtWl" />
         <child id="4079546759073522236" name="configuredComponents" index="23Ghgl" />
+        <child id="2781909770750563212" name="tiles" index="2$nsuY" />
         <child id="7784207101902285973" name="options" index="2MWAe8" />
         <child id="7784207101902499646" name="authFunction" index="2MZU0z" />
+        <child id="7784207101904780260" name="mainMenu" index="2N77jT" />
       </concept>
       <concept id="7784207101902368101" name="org.modellwerkstatt.dataux.structure.AppAuthenticationFunction" flags="ig" index="2MWq9S" />
       <concept id="7784207101902285036" name="org.modellwerkstatt.dataux.structure.Version" flags="ng" index="2MWAvL">
@@ -110,6 +145,7 @@
       <concept id="7784207101902693001" name="org.modellwerkstatt.dataux.structure.OfficialAppName" flags="ng" index="2MZaQk">
         <child id="7784207101902693002" name="exp" index="2MZaQn" />
       </concept>
+      <concept id="3887124829266131198" name="org.modellwerkstatt.dataux.structure.MenuAction" flags="ng" index="33WYYh" />
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
@@ -120,6 +156,30 @@
   <node concept="2MVcZ9" id="7Id2iZPcBPm">
     <property role="TrG5h" value="Coupon" />
     <ref role="2WPtWl" node="7Id2iZPcCn8" resolve="FX8FatConfig" />
+    <node concept="33WYYh" id="58L_rBVHJqQ" role="2N77jT">
+      <ref role="2_Hrwf" to="x60x:7Id2iZPcCEw" resolve="OrganisationsProzess" />
+      <ref role="2_Hrw8" to="x60x:58L_rBVqW5D" resolve="Organisation suchen" />
+      <node concept="10Nm6u" id="58L_rBVHJrE" role="2_HrWp" />
+    </node>
+    <node concept="33WYYh" id="58L_rBVHJrM" role="2N77jT">
+      <ref role="2_Hrwf" to="x60x:7Id2iZPcCEw" resolve="OrganisationsProzess" />
+      <ref role="2_Hrw8" to="x60x:58L_rBVqW7r" resolve="Person suchen" />
+      <node concept="10Nm6u" id="58L_rBVHJrN" role="2_HrWp" />
+    </node>
+    <node concept="2$ntO6" id="58L_rBVHJmX" role="2$nsuY">
+      <node concept="33WYYh" id="58L_rBVHJmY" role="2$ntUL">
+        <ref role="2_Hrwf" to="x60x:7Id2iZPcCEw" resolve="OrganisationsProzess" />
+        <ref role="2_Hrw8" to="x60x:58L_rBVqW5D" resolve="Organisation suchen" />
+        <node concept="10Nm6u" id="58L_rBVHJpR" role="2_HrWp" />
+      </node>
+    </node>
+    <node concept="2$ntO6" id="58L_rBVHJpZ" role="2$nsuY">
+      <node concept="33WYYh" id="58L_rBVHJq0" role="2$ntUL">
+        <ref role="2_Hrwf" to="x60x:7Id2iZPcCEw" resolve="OrganisationsProzess" />
+        <ref role="2_Hrw8" to="x60x:58L_rBVqW7r" resolve="Person suchen" />
+        <node concept="10Nm6u" id="58L_rBVHJq1" role="2_HrWp" />
+      </node>
+    </node>
     <node concept="3ulXEM" id="7Id2iZPcO5s" role="23Ghgl">
       <property role="TrG5h" value="settings" />
       <node concept="3uibUv" id="7Id2iZPcO5y" role="1tU5fm">
@@ -175,12 +235,122 @@
   </node>
   <node concept="2CG7Z0" id="7Id2iZPcCn8">
     <property role="TrG5h" value="FX8FatConfig" />
+    <property role="2320hu" value="2018-06-12T14:11:36.713+02:00" />
+    <node concept="2CJ4_Q" id="58L_rBVJIi5" role="2CGBMS">
+      <ref role="2CJ4_N" node="58L_rBVJIeR" resolve="common" />
+    </node>
+    <node concept="2CJf3v" id="7Id2iZPcPbc" role="2CGBMS">
+      <property role="TrG5h" value="platform" />
+      <node concept="Xl_RD" id="7Id2iZPcPbe" role="2CJf0U">
+        <property role="Xl_RC" value="at.hafina.coupon.stamm.CouponRessources_FX8" />
+      </node>
+      <node concept="2CJf1O" id="7Id2iZPcPbI" role="2CJ4_l">
+        <node concept="Xl_RD" id="7Id2iZPcPbJ" role="2DqwMp">
+          <property role="Xl_RC" value="BABY" />
+        </node>
+        <node concept="Xl_RD" id="7Id2iZPcPbP" role="2DqwMv">
+          <property role="Xl_RC" value="0" />
+        </node>
+      </node>
+    </node>
+    <node concept="2CJ4_Q" id="7Id2iZPcOSj" role="2CGBMS">
+      <ref role="2CJ4_N" to="es3z:7Id2iZPcONe" resolve="FatPooledSource" />
+      <node concept="26L8Vk" id="7Id2iZPcOUW" role="2CPvpQ">
+        <ref role="26L8Vy" to="es3z:4LC0Y0L2paC" resolve="user" />
+        <node concept="Xl_RD" id="7Id2iZPcOUX" role="26L8Vw">
+          <property role="Xl_RC" value="reko" />
+        </node>
+      </node>
+      <node concept="26L8Vk" id="7Id2iZPcOV3" role="2CPvpQ">
+        <ref role="26L8Vy" to="es3z:4LC0Y0L2paE" resolve="password" />
+        <node concept="Xl_RD" id="7Id2iZPcOV4" role="26L8Vw">
+          <property role="Xl_RC" value="test" />
+        </node>
+      </node>
+    </node>
+    <node concept="2CJ4_Q" id="7Id2iZPcOTT" role="2CGBMS">
+      <ref role="2CJ4_N" to="es3z:7Id2iZPcOJm" resolve="BasicInfra" />
+    </node>
+    <node concept="2CPvp3" id="58L_rBVJIgS" role="2CGBMS" />
+    <node concept="2CJ4_Q" id="7Id2iZPcP9Y" role="2CGBMS">
+      <ref role="2CJ4_N" to="es3z:4LC0Y0L2pbw" resolve="DEP_UserEnvironmentInformation" />
+    </node>
+    <node concept="2CJf3v" id="6Rdz00zW6jD" role="2CGBMS">
+      <property role="TrG5h" value="consoleAppFactory" />
+      <node concept="Xl_RD" id="6Rdz00zW6jE" role="2CJf0U">
+        <property role="Xl_RC" value="org.modellwerkstatt.fx8forms.windows.FX8UiFactory" />
+      </node>
+    </node>
+    <node concept="2CJ4_Q" id="58L_rBVHJuT" role="2CGBMS">
+      <ref role="2CJ4_N" node="58L_rBVHJtE" resolve="AUTO_CALC" />
+    </node>
   </node>
   <node concept="2CG7Z0" id="7Id2iZPcCn9">
     <property role="TrG5h" value="VaadinConfig" />
   </node>
   <node concept="2CG7Z0" id="7Id2iZPcCna">
     <property role="TrG5h" value="A__ProjectBaseConfig" />
+    <property role="2320hu" value="2018-06-12T14:11:41.854+02:00" />
+    <node concept="2CJoq6" id="58L_rBVJIeR" role="2CGBMS">
+      <property role="TrG5h" value="common" />
+      <node concept="2CJf3v" id="58L_rBVJ3QL" role="2CJdiS">
+        <property role="TrG5h" value="couponSettings" />
+        <node concept="Xl_RD" id="58L_rBVJ3QN" role="2CJf0U">
+          <property role="Xl_RC" value="at.hafina.coupon.app.CouponSettings" />
+        </node>
+      </node>
+    </node>
+    <node concept="2CJoq6" id="58L_rBVHJtE" role="2CGBMS">
+      <property role="TrG5h" value="AUTO_CALC" />
+      <node concept="2CJf3v" id="58L_rBVHJtF" role="2CJdiS">
+        <property role="TrG5h" value="at.hafina.coupon.stamm.MapOrganisation" />
+        <node concept="Xl_RD" id="58L_rBVHJtG" role="2CJf0U">
+          <property role="Xl_RC" value="at.hafina.coupon.stamm.MapOrganisation" />
+        </node>
+      </node>
+      <node concept="2CJf3v" id="58L_rBVHJtH" role="2CJdiS">
+        <property role="TrG5h" value="at.hafina.coupon.stamm.MapPerson" />
+        <node concept="Xl_RD" id="58L_rBVHJtI" role="2CJf0U">
+          <property role="Xl_RC" value="at.hafina.coupon.stamm.MapPerson" />
+        </node>
+      </node>
+      <node concept="2CJf3v" id="58L_rBVHJtJ" role="2CJdiS">
+        <property role="TrG5h" value="__extKartenService" />
+        <node concept="Xl_RD" id="58L_rBVHJtK" role="2CJf0U">
+          <property role="Xl_RC" value="at.hafina.coupon.gutschein.ExtKartenService" />
+        </node>
+      </node>
+      <node concept="2CJf3v" id="58L_rBVHJtL" role="2CJdiS">
+        <property role="TrG5h" value="__organisationsProzess" />
+        <node concept="Xl_RD" id="58L_rBVHJtM" role="2CJf0U">
+          <property role="Xl_RC" value="at.hafina.coupon.stamm.OrganisationsProzess" />
+        </node>
+      </node>
+      <node concept="2CJf3v" id="58L_rBVHJtN" role="2CJdiS">
+        <property role="TrG5h" value="__personenDaten" />
+        <node concept="Xl_RD" id="58L_rBVHJtO" role="2CJf0U">
+          <property role="Xl_RC" value="at.hafina.coupon.stamm.PersonenDaten" />
+        </node>
+      </node>
+      <node concept="2CJf3v" id="58L_rBVHJtP" role="2CJdiS">
+        <property role="TrG5h" value="__organisationsDaten" />
+        <node concept="Xl_RD" id="58L_rBVHJtQ" role="2CJf0U">
+          <property role="Xl_RC" value="at.hafina.coupon.stamm.OrganisationsDaten" />
+        </node>
+      </node>
+      <node concept="2CJf3v" id="58L_rBVHJtR" role="2CJdiS">
+        <property role="TrG5h" value="__organisationRepo" />
+        <node concept="Xl_RD" id="58L_rBVHJtS" role="2CJf0U">
+          <property role="Xl_RC" value="at.hafina.coupon.stamm.OrganisationRepo" />
+        </node>
+      </node>
+      <node concept="2CJf3v" id="58L_rBVHJtT" role="2CJdiS">
+        <property role="TrG5h" value="__gutscheinProzess" />
+        <node concept="Xl_RD" id="58L_rBVHJtU" role="2CJf0U">
+          <property role="Xl_RC" value="at.hafina.coupon.gutscheinProc.GutscheinProzess" />
+        </node>
+      </node>
+    </node>
   </node>
   <node concept="312cEu" id="7Id2iZPcO2Q">
     <property role="TrG5h" value="CouponSettings" />
