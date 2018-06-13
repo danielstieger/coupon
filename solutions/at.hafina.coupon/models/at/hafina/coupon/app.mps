@@ -61,6 +61,7 @@
       <concept id="1068580123155" name="jetbrains.mps.baseLanguage.structure.ExpressionStatement" flags="nn" index="3clFbF">
         <child id="1068580123156" name="expression" index="3clFbG" />
       </concept>
+      <concept id="1068580123157" name="jetbrains.mps.baseLanguage.structure.Statement" flags="nn" index="3clFbH" />
       <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS">
         <child id="1068581517665" name="statement" index="3cqZAp" />
       </concept>
@@ -87,6 +88,12 @@
       </concept>
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
+      </concept>
+      <concept id="6329021646629104957" name="jetbrains.mps.baseLanguage.structure.TextCommentPart" flags="nn" index="3SKdUq">
+        <property id="6329021646629104958" name="text" index="3SKdUp" />
+      </concept>
+      <concept id="6329021646629104954" name="jetbrains.mps.baseLanguage.structure.SingleLineComment" flags="nn" index="3SKdUt">
+        <child id="6329021646629175155" name="commentPart" index="3SKWNk" />
       </concept>
       <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
       <concept id="1146644623116" name="jetbrains.mps.baseLanguage.structure.PrivateVisibility" flags="nn" index="3Tm6S6" />
@@ -239,6 +246,23 @@
             </node>
           </node>
         </node>
+        <node concept="3clFbH" id="1ZFIhrf9bPN" role="3cqZAp" />
+        <node concept="3SKdUt" id="1ZFIhrf9bWs" role="3cqZAp">
+          <node concept="3SKdUq" id="1ZFIhrf9bWu" role="3SKWNk">
+            <property role="3SKdUp" value="MPreis Admin" />
+          </node>
+        </node>
+        <node concept="3SKdUt" id="1ZFIhrf9c12" role="3cqZAp">
+          <node concept="3SKdUq" id="1ZFIhrf9c14" role="3SKWNk">
+            <property role="3SKdUp" value="User of an organisation" />
+          </node>
+        </node>
+        <node concept="3SKdUt" id="1ZFIhrf9c6k" role="3cqZAp">
+          <node concept="3SKdUq" id="1ZFIhrf9c6m" role="3SKWNk">
+            <property role="3SKdUp" value="Organization responsible" />
+          </node>
+        </node>
+        <node concept="3clFbH" id="1ZFIhrf9bSP" role="3cqZAp" />
         <node concept="3clFbF" id="7Id2iZPcCkD" role="3cqZAp">
           <node concept="3clFbT" id="7Id2iZPcCkC" role="3clFbG">
             <property role="3clFbU" value="true" />

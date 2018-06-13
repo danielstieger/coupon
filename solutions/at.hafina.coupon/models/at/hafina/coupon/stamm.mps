@@ -156,6 +156,8 @@
         <child id="3526396426289727549" name="value" index="26L8Vw" />
       </concept>
       <concept id="4678401045862675371" name="org.modellwerkstatt.objectflow.structure.CommandCreationInfo" flags="ng" index="27Aftt">
+        <property id="4678401045864276002" name="refName" index="27oQjk" />
+        <child id="4678401045862675913" name="keyReference" index="27Af4Z" />
         <child id="4678401045862675827" name="msg" index="27Af65" />
       </concept>
       <concept id="8614254524338490549" name="org.modellwerkstatt.objectflow.structure.LengthOption" flags="ng" index="8tbpG">
@@ -2062,6 +2064,31 @@
         </node>
       </node>
     </node>
+    <node concept="wbJLE" id="1ZFIhrfcA6u" role="jymVt">
+      <property role="TrG5h" value="findOrganisationById" />
+      <node concept="37vLTG" id="1ZFIhrfcA9f" role="3clF46">
+        <property role="TrG5h" value="id" />
+        <node concept="10Oyi0" id="1ZFIhrfcA9l" role="1tU5fm" />
+      </node>
+      <node concept="3uibUv" id="1ZFIhrfcAa6" role="3clF45">
+        <ref role="3uigEE" node="7Id2iZPc_Oc" resolve="Organisation" />
+      </node>
+      <node concept="3Tm1VV" id="1ZFIhrfcA6w" role="1B3o_S" />
+      <node concept="3clFbS" id="1ZFIhrfcA6x" role="3clF47">
+        <node concept="3clFbF" id="1ZFIhrfcAaZ" role="3cqZAp">
+          <node concept="jybIQ" id="1ZFIhrfcAaY" role="3clFbG">
+            <property role="1v8G3g" value="false" />
+            <property role="HScZ5" value="true" />
+            <ref role="P14SV" node="7Id2iZPcDOa" resolve="MapOrganisation" />
+            <node concept="TUlRj" id="1ZFIhrfcAdq" role="jxX7b">
+              <node concept="37vLTw" id="1ZFIhrfcAdF" role="TUlRy">
+                <ref role="3cqZAo" node="1ZFIhrfcA9f" resolve="id" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
     <node concept="wbJLE" id="7Id2iZPcMwG" role="jymVt">
       <property role="wbJLN" value="CHECKIN" />
       <property role="TrG5h" value="checkinOrganisation" />
@@ -2241,6 +2268,39 @@
                       </node>
                     </node>
                   </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="wbJLE" id="1ZFIhrf5XIs" role="jymVt">
+      <property role="TrG5h" value="findPersonByOrgId" />
+      <node concept="37vLTG" id="1ZFIhrf5XIt" role="3clF46">
+        <property role="TrG5h" value="id" />
+        <node concept="10Oyi0" id="1ZFIhrf5XQp" role="1tU5fm" />
+      </node>
+      <node concept="_YKpA" id="1ZFIhrf5XIv" role="3clF45">
+        <node concept="3uibUv" id="1ZFIhrf5XIw" role="_ZDj9">
+          <ref role="3uigEE" node="7Id2iZPc9Y3" resolve="Person" />
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="1ZFIhrf5XIx" role="1B3o_S" />
+      <node concept="3clFbS" id="1ZFIhrf5XIy" role="3clF47">
+        <node concept="3cpWs6" id="1ZFIhrf5XIz" role="3cqZAp">
+          <node concept="jybIQ" id="1ZFIhrf5XI$" role="3cqZAk">
+            <property role="1v8G3g" value="false" />
+            <property role="HScZ5" value="true" />
+            <ref role="P14SV" node="7Id2iZPcDOj" resolve="MapPerson" />
+            <node concept="jxyYR" id="1ZFIhrf5XI_" role="jxX7b">
+              <node concept="3clFbC" id="1ZFIhrf5Y2e" role="jxyYK">
+                <node concept="37vLTw" id="1ZFIhrf5Y36" role="3uHU7w">
+                  <ref role="3cqZAo" node="1ZFIhrf5XIt" resolve="id" />
+                </node>
+                <node concept="3_7ulE" id="1ZFIhrf5XYB" role="3uHU7B">
+                  <ref role="3_688M" node="1ZFIhrf5XI$" />
+                  <ref role="2OG787" node="7Id2iZPcMsP" />
                 </node>
               </node>
             </node>
@@ -2572,6 +2632,7 @@
       <ref role="10EhbB" node="7Id2iZPcCE_" resolve="organisation" />
     </node>
     <node concept="27Aftt" id="58L_rBVU_BM" role="27AfA_">
+      <property role="27oQjk" value="orgId" />
       <node concept="35AVbj" id="58L_rBVU_CA" role="27Af65">
         <property role="35AVef" value="Organisation %s angelegt." />
         <node concept="2OqwBi" id="58L_rBVU_Ey" role="35Gt3$">
@@ -2581,6 +2642,14 @@
           <node concept="2S8uIT" id="58L_rBVU_Ft" role="2OqNvi">
             <ref role="2S8YL0" node="7Id2iZPcBAp" resolve="name" />
           </node>
+        </node>
+      </node>
+      <node concept="2OqwBi" id="1ZFIhrfcBzg" role="27Af4Z">
+        <node concept="10EhbA" id="1ZFIhrfcByB" role="2Oq$k0">
+          <ref role="10EhbB" node="7Id2iZPcCE_" resolve="organisation" />
+        </node>
+        <node concept="2S8uIT" id="1ZFIhrfcB$q" role="2OqNvi">
+          <ref role="2S8YL0" node="7Id2iZPcB_X" resolve="id" />
         </node>
       </node>
     </node>
@@ -3774,6 +3843,12 @@
     </node>
     <node concept="2PePtf" id="1ZFIhre$gM1" role="2PKp_6">
       <property role="TrG5h" value="Personen" />
+      <node concept="3ulXEN" id="1ZFIhrf5Xlo" role="3ulXEL">
+        <property role="TrG5h" value="org" />
+        <node concept="3uibUv" id="1ZFIhrf5XpD" role="1tU5fm">
+          <ref role="3uigEE" node="7Id2iZPc_Oc" resolve="Organisation" />
+        </node>
+      </node>
       <node concept="1jyyp0" id="1ZFIhre$gM2" role="2PePtt">
         <node concept="3clFbS" id="1ZFIhre$gM3" role="2VODD2">
           <node concept="3SKdUt" id="1ZFIhre$gM4" role="3cqZAp">
@@ -3784,10 +3859,13 @@
           <node concept="3clFbF" id="1ZFIhre$gM6" role="3cqZAp">
             <node concept="1odsa" id="1ZFIhre$gM7" role="3clFbG">
               <ref role="1ods_" node="7Id2iZPcMug" resolve="OrganisationRepo" />
-              <ref role="37wK5l" node="58L_rBVQ_LE" resolve="findPersonBySuchParams" />
-              <node concept="2ShNRf" id="1ZFIhre$gM8" role="37wK5m">
-                <node concept="1pGfFk" id="1ZFIhre$gM9" role="2ShVmc">
-                  <ref role="37wK5l" node="58L_rBVr35p" resolve="PersonenSucheParams" />
+              <ref role="37wK5l" node="1ZFIhrf5XIs" resolve="findPersonByOrgId" />
+              <node concept="2OqwBi" id="1ZFIhrf5Yfd" role="37wK5m">
+                <node concept="3urNQE" id="1ZFIhrf5Yc3" role="2Oq$k0">
+                  <ref role="3cqZAo" node="1ZFIhrf5Xlo" resolve="org" />
+                </node>
+                <node concept="2S8uIT" id="1ZFIhrf5YiL" role="2OqNvi">
+                  <ref role="2S8YL0" node="7Id2iZPcB_X" resolve="id" />
                 </node>
               </node>
             </node>
@@ -3802,23 +3880,93 @@
       <property role="TrG5h" value="ADMIN" />
       <node concept="2RjIcg" id="1ZFIhre$f1l" role="2RjIad">
         <node concept="3clFbS" id="1ZFIhre$f1m" role="2VODD2">
-          <node concept="3clFbF" id="1ZFIhre$f2U" role="3cqZAp">
-            <node concept="2OqwBi" id="1ZFIhre$f9n" role="3clFbG">
-              <node concept="liA8E" id="1ZFIhre$fgf" role="2OqNvi">
-                <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object):boolean" resolve="equals" />
-                <node concept="2OqwBi" id="1ZFIhre$f41" role="37wK5m">
-                  <node concept="2Rjrh3" id="1ZFIhre$f2T" role="2Oq$k0" />
-                  <node concept="liA8E" id="1ZFIhre$f6a" role="2OqNvi">
-                    <ref role="37wK5l" to="w7gk:4fBSqdHDY_k" resolve="getUserName" />
-                  </node>
-                </node>
+          <node concept="3clFbF" id="1ZFIhrfaXlu" role="3cqZAp">
+            <node concept="3clFbC" id="1ZFIhrfaXvg" role="3clFbG">
+              <node concept="3cmrfG" id="1ZFIhrfaXx9" role="3uHU7w">
+                <property role="3cmrfH" value="1" />
               </node>
-              <node concept="Xl_RD" id="1ZFIhre$fhw" role="2Oq$k0">
-                <property role="Xl_RC" value="daniels" />
+              <node concept="2OqwBi" id="1ZFIhrfaXnj" role="3uHU7B">
+                <node concept="2Rjrh3" id="1ZFIhrfaXls" role="2Oq$k0" />
+                <node concept="liA8E" id="1ZFIhrfaXqe" role="2OqNvi">
+                  <ref role="37wK5l" to="w7gk:47yM9mP3xmG" resolve="getUserId" />
+                </node>
               </node>
             </node>
           </node>
         </node>
+      </node>
+    </node>
+  </node>
+  <node concept="34Athd" id="1ZFIhrf9cbd">
+    <property role="3GE5qa" value="DATA" />
+    <property role="TrG5h" value="OrgAdmin" />
+    <node concept="3Tm1VV" id="1ZFIhrf9cbf" role="1B3o_S" />
+    <node concept="3clFbW" id="1ZFIhrf9cbg" role="jymVt">
+      <node concept="3cqZAl" id="1ZFIhrf9cbh" role="3clF45" />
+      <node concept="3Tm1VV" id="1ZFIhrf9cbi" role="1B3o_S" />
+      <node concept="3clFbS" id="1ZFIhrf9cbj" role="3clF47" />
+    </node>
+    <node concept="1bOX9e" id="1ZFIhrf9cbk" role="TxmiU">
+      <property role="2RkwnN" value="id" />
+      <property role="TrG5h" value="id" />
+      <node concept="3Tm1VV" id="1ZFIhrf9cbq" role="1B3o_S" />
+      <node concept="2RoN1w" id="1ZFIhrf9cbr" role="2RnVtd">
+        <node concept="3wEZqW" id="1ZFIhrf9cbs" role="3wFrgM" />
+        <node concept="3xqBd$" id="1ZFIhrf9cbt" role="3xrYvX">
+          <node concept="3Tm1VV" id="1ZFIhrf9cbv" role="3xqFEP" />
+        </node>
+      </node>
+      <node concept="Xl_RD" id="1ZFIhrf9cbw" role="2CNmdP">
+        <property role="Xl_RC" value="id" />
+      </node>
+      <node concept="Xl_RD" id="1ZFIhrf9cbx" role="2CNmdL">
+        <property role="Xl_RC" value="Key-Id" />
+      </node>
+      <node concept="10Oyi0" id="1ZFIhrf9cby" role="2RkE6I" />
+      <node concept="jyRCx" id="1ZFIhrf9cbz" role="0orDa" />
+      <node concept="jyRCY" id="1ZFIhrf9cb$" role="0orDa">
+        <node concept="Xl_RD" id="1ZFIhrf9cb_" role="jyRCS">
+          <property role="Xl_RC" value="S_CPO_ORGADMIN" />
+        </node>
+      </node>
+    </node>
+    <node concept="1bOX9e" id="1ZFIhrf9ce3" role="TxmiU">
+      <property role="2RkwnN" value="person" />
+      <node concept="3Tm1VV" id="1ZFIhrf9ce9" role="1B3o_S" />
+      <node concept="2RoN1w" id="1ZFIhrf9cea" role="2RnVtd">
+        <node concept="3wEZqW" id="1ZFIhrf9ceb" role="3wFrgM" />
+        <node concept="3xqBd$" id="1ZFIhrf9cec" role="3xrYvX">
+          <node concept="3Tm1VV" id="1ZFIhrf9cee" role="3xqFEP" />
+        </node>
+      </node>
+      <node concept="3uibUv" id="1ZFIhrf9cf0" role="2RkE6I">
+        <ref role="3uigEE" node="7Id2iZPc9Y3" resolve="Person" />
+      </node>
+    </node>
+    <node concept="1bOX9e" id="1ZFIhrf9cfw" role="TxmiU">
+      <property role="2RkwnN" value="organisation" />
+      <node concept="3Tm1VV" id="1ZFIhrf9cfA" role="1B3o_S" />
+      <node concept="2RoN1w" id="1ZFIhrf9cfB" role="2RnVtd">
+        <node concept="3wEZqW" id="1ZFIhrf9cfC" role="3wFrgM" />
+        <node concept="3xqBd$" id="1ZFIhrf9cfD" role="3xrYvX">
+          <node concept="3Tm1VV" id="1ZFIhrf9cfF" role="3xqFEP" />
+        </node>
+      </node>
+      <node concept="3uibUv" id="1ZFIhrf9cgu" role="2RkE6I">
+        <ref role="3uigEE" node="7Id2iZPc_Oc" resolve="Organisation" />
+      </node>
+    </node>
+    <node concept="1bOX9e" id="1ZFIhrf9chf" role="TxmiU">
+      <property role="2RkwnN" value="aktiv" />
+      <node concept="3Tm1VV" id="1ZFIhrf9chl" role="1B3o_S" />
+      <node concept="2RoN1w" id="1ZFIhrf9chm" role="2RnVtd">
+        <node concept="3wEZqW" id="1ZFIhrf9chn" role="3wFrgM" />
+        <node concept="3xqBd$" id="1ZFIhrf9cho" role="3xrYvX">
+          <node concept="3Tm1VV" id="1ZFIhrf9chq" role="3xqFEP" />
+        </node>
+      </node>
+      <node concept="2XvVpB" id="1ZFIhrf9ci7" role="2RkE6I">
+        <ref role="3$lB4D" node="7Id2iZPcCpM" resolve="BStatus" />
       </node>
     </node>
   </node>
