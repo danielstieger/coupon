@@ -11,7 +11,6 @@
   <imports>
     <import index="rtx2" ref="r:f2abaf7c-b7b5-461d-a351-9ebf9227ede8(at.hafina.coupon.gutschein)" />
     <import index="x60x" ref="r:ba343f80-f4e3-428e-9c3a-67fed1758531(at.hafina.coupon.stamm)" />
-    <import index="5htd" ref="r:d1497da2-b9f0-4944-9bfe-36cfd432b158(at.hafina.coupon.gutscheinProc)" />
     <import index="es3z" ref="r:9198be85-5ede-4b75-9739-3e6da45d3552(at.hafina.coupon.configbase)" />
     <import index="w7gk" ref="r:22abd22f-3c78-4514-b7c6-da1d82c38fe2(org.modellwerkstatt.manmap.solution.manmapRT)" implicit="true" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
@@ -180,6 +179,21 @@
         <node concept="10Nm6u" id="58L_rBVHJq1" role="2_HrWp" />
       </node>
     </node>
+    <node concept="2$ntO6" id="1ZFIhre$dCs" role="2$nsuY">
+      <node concept="33WYYh" id="1ZFIhre$dCt" role="2$ntUL">
+        <ref role="2_Hrwf" to="rtx2:1ZFIhreoFMS" resolve="GutscheinProzess" />
+        <ref role="2_Hrw8" to="rtx2:1ZFIhrepho4" resolve="Gutschein erstellen" />
+        <node concept="10Nm6u" id="1ZFIhre$dDY" role="2_HrWp" />
+        <node concept="10Nm6u" id="1ZFIhre$dFf" role="2_HrWp" />
+      </node>
+    </node>
+    <node concept="2$ntO6" id="1ZFIhreM_1d" role="2$nsuY">
+      <node concept="33WYYh" id="1ZFIhreM_1e" role="2$ntUL">
+        <ref role="2_Hrwf" to="rtx2:1ZFIhreoFMS" resolve="GutscheinProzess" />
+        <ref role="2_Hrw8" to="rtx2:1ZFIhre$eVW" resolve="Gutscheine suchen" />
+        <node concept="10Nm6u" id="1ZFIhreM_29" role="2_HrWp" />
+      </node>
+    </node>
     <node concept="3ulXEM" id="7Id2iZPcO5s" role="23Ghgl">
       <property role="TrG5h" value="settings" />
       <node concept="3uibUv" id="7Id2iZPcO5y" role="1tU5fm">
@@ -290,7 +304,7 @@
   </node>
   <node concept="2CG7Z0" id="7Id2iZPcCna">
     <property role="TrG5h" value="A__ProjectBaseConfig" />
-    <property role="2320hu" value="2018-06-12T14:11:41.854+02:00" />
+    <property role="2320hu" value="2018-06-13T16:43:42.815+02:00" />
     <node concept="2CJoq6" id="58L_rBVJIeR" role="2CGBMS">
       <property role="TrG5h" value="common" />
       <node concept="2CJf3v" id="58L_rBVJ3QL" role="2CJdiS">
@@ -302,52 +316,100 @@
     </node>
     <node concept="2CJoq6" id="58L_rBVHJtE" role="2CGBMS">
       <property role="TrG5h" value="AUTO_CALC" />
-      <node concept="2CJf3v" id="58L_rBVHJtF" role="2CJdiS">
+      <node concept="2CJf3v" id="1ZFIhreXG_2" role="2CJdiS">
+        <property role="TrG5h" value="at.hafina.coupon.gutschein.MapAufladung" />
+        <node concept="Xl_RD" id="1ZFIhreXG_3" role="2CJf0U">
+          <property role="Xl_RC" value="at.hafina.coupon.gutschein.MapAufladung" />
+        </node>
+      </node>
+      <node concept="2CJf3v" id="1ZFIhreXG_4" role="2CJdiS">
+        <property role="TrG5h" value="at.hafina.coupon.gutschein.MapAufladungsgruppe" />
+        <node concept="Xl_RD" id="1ZFIhreXG_5" role="2CJf0U">
+          <property role="Xl_RC" value="at.hafina.coupon.gutschein.MapAufladungsgruppe" />
+        </node>
+      </node>
+      <node concept="2CJf3v" id="1ZFIhreXG_6" role="2CJdiS">
+        <property role="TrG5h" value="at.hafina.coupon.gutschein.MapPersonAufldgsgrp" />
+        <node concept="Xl_RD" id="1ZFIhreXG_7" role="2CJf0U">
+          <property role="Xl_RC" value="at.hafina.coupon.gutschein.MapPersonAufldgsgrp" />
+        </node>
+      </node>
+      <node concept="2CJf3v" id="1ZFIhreXG_8" role="2CJdiS">
+        <property role="TrG5h" value="at.hafina.coupon.gutschein.MapGutschein" />
+        <node concept="Xl_RD" id="1ZFIhreXG_9" role="2CJf0U">
+          <property role="Xl_RC" value="at.hafina.coupon.gutschein.MapGutschein" />
+        </node>
+      </node>
+      <node concept="2CJf3v" id="1ZFIhreXG_a" role="2CJdiS">
         <property role="TrG5h" value="at.hafina.coupon.stamm.MapOrganisation" />
-        <node concept="Xl_RD" id="58L_rBVHJtG" role="2CJf0U">
+        <node concept="Xl_RD" id="1ZFIhreXG_b" role="2CJf0U">
           <property role="Xl_RC" value="at.hafina.coupon.stamm.MapOrganisation" />
         </node>
       </node>
-      <node concept="2CJf3v" id="58L_rBVHJtH" role="2CJdiS">
+      <node concept="2CJf3v" id="1ZFIhreXG_c" role="2CJdiS">
         <property role="TrG5h" value="at.hafina.coupon.stamm.MapPerson" />
-        <node concept="Xl_RD" id="58L_rBVHJtI" role="2CJf0U">
+        <node concept="Xl_RD" id="1ZFIhreXG_d" role="2CJf0U">
           <property role="Xl_RC" value="at.hafina.coupon.stamm.MapPerson" />
         </node>
       </node>
-      <node concept="2CJf3v" id="58L_rBVHJtJ" role="2CJdiS">
+      <node concept="2CJf3v" id="1ZFIhreXG_e" role="2CJdiS">
         <property role="TrG5h" value="__extKartenService" />
-        <node concept="Xl_RD" id="58L_rBVHJtK" role="2CJf0U">
+        <node concept="Xl_RD" id="1ZFIhreXG_f" role="2CJf0U">
           <property role="Xl_RC" value="at.hafina.coupon.gutschein.ExtKartenService" />
         </node>
       </node>
-      <node concept="2CJf3v" id="58L_rBVHJtL" role="2CJdiS">
+      <node concept="2CJf3v" id="1ZFIhreXG_g" role="2CJdiS">
+        <property role="TrG5h" value="__gutscheinRepo" />
+        <node concept="Xl_RD" id="1ZFIhreXG_h" role="2CJf0U">
+          <property role="Xl_RC" value="at.hafina.coupon.gutschein.GutscheinRepo" />
+        </node>
+      </node>
+      <node concept="2CJf3v" id="1ZFIhreXG_i" role="2CJdiS">
+        <property role="TrG5h" value="__gutscheinData" />
+        <node concept="Xl_RD" id="1ZFIhreXG_j" role="2CJf0U">
+          <property role="Xl_RC" value="at.hafina.coupon.gutschein.GutscheinData" />
+        </node>
+      </node>
+      <node concept="2CJf3v" id="1ZFIhreXG_k" role="2CJdiS">
+        <property role="TrG5h" value="__gutscheinProzess" />
+        <node concept="Xl_RD" id="1ZFIhreXG_l" role="2CJf0U">
+          <property role="Xl_RC" value="at.hafina.coupon.gutschein.GutscheinProzess" />
+        </node>
+      </node>
+      <node concept="2CJf3v" id="1ZFIhreXG_m" role="2CJdiS">
+        <property role="TrG5h" value="__aufladungsService" />
+        <node concept="Xl_RD" id="1ZFIhreXG_n" role="2CJf0U">
+          <property role="Xl_RC" value="at.hafina.coupon.gutschein.AufladungsService" />
+        </node>
+      </node>
+      <node concept="2CJf3v" id="1ZFIhreXG_o" role="2CJdiS">
         <property role="TrG5h" value="__organisationsProzess" />
-        <node concept="Xl_RD" id="58L_rBVHJtM" role="2CJf0U">
+        <node concept="Xl_RD" id="1ZFIhreXG_p" role="2CJf0U">
           <property role="Xl_RC" value="at.hafina.coupon.stamm.OrganisationsProzess" />
         </node>
       </node>
-      <node concept="2CJf3v" id="58L_rBVHJtN" role="2CJdiS">
+      <node concept="2CJf3v" id="1ZFIhreXG_q" role="2CJdiS">
         <property role="TrG5h" value="__personenDaten" />
-        <node concept="Xl_RD" id="58L_rBVHJtO" role="2CJf0U">
+        <node concept="Xl_RD" id="1ZFIhreXG_r" role="2CJf0U">
           <property role="Xl_RC" value="at.hafina.coupon.stamm.PersonenDaten" />
         </node>
       </node>
-      <node concept="2CJf3v" id="58L_rBVHJtP" role="2CJdiS">
+      <node concept="2CJf3v" id="1ZFIhreXG_s" role="2CJdiS">
         <property role="TrG5h" value="__organisationsDaten" />
-        <node concept="Xl_RD" id="58L_rBVHJtQ" role="2CJf0U">
+        <node concept="Xl_RD" id="1ZFIhreXG_t" role="2CJf0U">
           <property role="Xl_RC" value="at.hafina.coupon.stamm.OrganisationsDaten" />
         </node>
       </node>
-      <node concept="2CJf3v" id="58L_rBVHJtR" role="2CJdiS">
+      <node concept="2CJf3v" id="1ZFIhreXG_u" role="2CJdiS">
         <property role="TrG5h" value="__organisationRepo" />
-        <node concept="Xl_RD" id="58L_rBVHJtS" role="2CJf0U">
+        <node concept="Xl_RD" id="1ZFIhreXG_v" role="2CJf0U">
           <property role="Xl_RC" value="at.hafina.coupon.stamm.OrganisationRepo" />
         </node>
       </node>
-      <node concept="2CJf3v" id="58L_rBVHJtT" role="2CJdiS">
-        <property role="TrG5h" value="__gutscheinProzess" />
-        <node concept="Xl_RD" id="58L_rBVHJtU" role="2CJf0U">
-          <property role="Xl_RC" value="at.hafina.coupon.gutscheinProc.GutscheinProzess" />
+      <node concept="2CJf3v" id="1ZFIhreXG_w" role="2CJdiS">
+        <property role="TrG5h" value="__orgPersonPerm" />
+        <node concept="Xl_RD" id="1ZFIhreXG_x" role="2CJf0U">
+          <property role="Xl_RC" value="at.hafina.coupon.stamm.OrgPersonPerm" />
         </node>
       </node>
     </node>

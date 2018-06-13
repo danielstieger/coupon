@@ -219,9 +219,18 @@
         <reference id="8484523473171384911" name="path" index="JpLXE" />
         <child id="8078003855688278894" name="expName" index="1o$Zrr" />
       </concept>
+      <concept id="4779674245203461929" name="org.modellwerkstatt.objectflow.structure.Scope" flags="ng" index="2PePtf">
+        <child id="4779674245203461947" name="scopeFunc" index="2PePtt" />
+        <child id="4779674245208419198" name="restricts" index="2PVZGo" />
+      </concept>
       <concept id="1642685958923200785" name="org.modellwerkstatt.objectflow.structure.TestData" flags="ng" index="PU5sW">
         <child id="8624114674902976382" name="builderExpression" index="34v4n$" />
       </concept>
+      <concept id="4779674245164262437" name="org.modellwerkstatt.objectflow.structure.UserEnvironmentParameter" flags="ng" index="2Rjrh3" />
+      <concept id="4779674245164303002" name="org.modellwerkstatt.objectflow.structure.StaticRole" flags="ng" index="2RjHbW">
+        <child id="4779674245164315371" name="staticRoleFunc" index="2RjIad" />
+      </concept>
+      <concept id="4779674245164315510" name="org.modellwerkstatt.objectflow.structure.StaticRoleFunc" flags="ig" index="2RjIcg" />
       <concept id="7270431012770461291" name="org.modellwerkstatt.objectflow.structure.BPRefIdReference" flags="ng" index="WNRgn">
         <reference id="7270431012770461292" name="businessProperty" index="WNRgg" />
       </concept>
@@ -298,6 +307,11 @@
       <concept id="7604036740764640594" name="org.modellwerkstatt.objectflow.structure.VariantDeclaration" flags="ng" index="3hNl9M">
         <property id="8988286044096513865" name="logOption" index="21hoB1" />
         <property id="7604036740764640651" name="variant" index="3hNlaF" />
+      </concept>
+      <concept id="4518330267516957488" name="org.modellwerkstatt.objectflow.structure.ScopeFunc" flags="ig" index="1jyyp0" />
+      <concept id="4518330267516965068" name="org.modellwerkstatt.objectflow.structure.RolesAndPermissions" flags="ng" index="1jyGmW">
+        <child id="4779674245205936416" name="scopes" index="2PKp_6" />
+        <child id="4779674245164354289" name="staticRoles" index="2RjxEn" />
       </concept>
       <concept id="7393934493398918410" name="org.modellwerkstatt.objectflow.structure.SuccessorCommandCall" flags="ng" index="1t46OP" />
       <concept id="7192042020163999185" name="org.modellwerkstatt.objectflow.structure.Process" flags="ng" index="3ugp7d">
@@ -2238,7 +2252,7 @@
   </node>
   <node concept="2CG7Z0" id="7Id2iZPcOR0">
     <property role="TrG5h" value="StammTestConfig" />
-    <property role="2320hu" value="2018-06-11T16:06:01.976+02:00" />
+    <property role="2320hu" value="2018-06-13T16:43:32.060+02:00" />
     <property role="3GE5qa" value="TEST" />
     <node concept="2CJf3v" id="7Id2iZPcPbc" role="2CGBMS">
       <property role="TrG5h" value="platform" />
@@ -2283,46 +2297,46 @@
     </node>
     <node concept="2CJoq6" id="7Id2iZPcOR1" role="2CGBMS">
       <property role="TrG5h" value="AUTO_CALC" />
-      <node concept="2CJf3v" id="7Id2iZPcOR2" role="2CJdiS">
+      <node concept="2CJf3v" id="1ZFIhreXGw1" role="2CJdiS">
         <property role="TrG5h" value="at.hafina.coupon.stamm.MapOrganisation" />
-        <node concept="Xl_RD" id="7Id2iZPcOR3" role="2CJf0U">
+        <node concept="Xl_RD" id="1ZFIhreXGw2" role="2CJf0U">
           <property role="Xl_RC" value="at.hafina.coupon.stamm.MapOrganisation" />
         </node>
       </node>
-      <node concept="2CJf3v" id="7Id2iZPcOR4" role="2CJdiS">
+      <node concept="2CJf3v" id="1ZFIhreXGw3" role="2CJdiS">
         <property role="TrG5h" value="at.hafina.coupon.stamm.MapPerson" />
-        <node concept="Xl_RD" id="7Id2iZPcOR5" role="2CJf0U">
+        <node concept="Xl_RD" id="1ZFIhreXGw4" role="2CJf0U">
           <property role="Xl_RC" value="at.hafina.coupon.stamm.MapPerson" />
         </node>
       </node>
-      <node concept="2CJf3v" id="7Id2iZPcOR6" role="2CJdiS">
-        <property role="TrG5h" value="__personenProzess" />
-        <node concept="Xl_RD" id="7Id2iZPcOR7" role="2CJf0U">
-          <property role="Xl_RC" value="at.hafina.coupon.stamm.PersonenProzess" />
-        </node>
-      </node>
-      <node concept="2CJf3v" id="7Id2iZPcOR8" role="2CJdiS">
+      <node concept="2CJf3v" id="1ZFIhreXGw5" role="2CJdiS">
         <property role="TrG5h" value="__organisationsProzess" />
-        <node concept="Xl_RD" id="7Id2iZPcOR9" role="2CJf0U">
+        <node concept="Xl_RD" id="1ZFIhreXGw6" role="2CJf0U">
           <property role="Xl_RC" value="at.hafina.coupon.stamm.OrganisationsProzess" />
         </node>
       </node>
-      <node concept="2CJf3v" id="7Id2iZPcORa" role="2CJdiS">
+      <node concept="2CJf3v" id="1ZFIhreXGw7" role="2CJdiS">
         <property role="TrG5h" value="__personenDaten" />
-        <node concept="Xl_RD" id="7Id2iZPcORb" role="2CJf0U">
+        <node concept="Xl_RD" id="1ZFIhreXGw8" role="2CJf0U">
           <property role="Xl_RC" value="at.hafina.coupon.stamm.PersonenDaten" />
         </node>
       </node>
-      <node concept="2CJf3v" id="7Id2iZPcORc" role="2CJdiS">
+      <node concept="2CJf3v" id="1ZFIhreXGw9" role="2CJdiS">
         <property role="TrG5h" value="__organisationsDaten" />
-        <node concept="Xl_RD" id="7Id2iZPcORd" role="2CJf0U">
+        <node concept="Xl_RD" id="1ZFIhreXGwa" role="2CJf0U">
           <property role="Xl_RC" value="at.hafina.coupon.stamm.OrganisationsDaten" />
         </node>
       </node>
-      <node concept="2CJf3v" id="7Id2iZPcORe" role="2CJdiS">
+      <node concept="2CJf3v" id="1ZFIhreXGwb" role="2CJdiS">
         <property role="TrG5h" value="__organisationRepo" />
-        <node concept="Xl_RD" id="7Id2iZPcORf" role="2CJf0U">
+        <node concept="Xl_RD" id="1ZFIhreXGwc" role="2CJf0U">
           <property role="Xl_RC" value="at.hafina.coupon.stamm.OrganisationRepo" />
+        </node>
+      </node>
+      <node concept="2CJf3v" id="1ZFIhreXGwd" role="2CJdiS">
+        <property role="TrG5h" value="__orgPersonPerm" />
+        <node concept="Xl_RD" id="1ZFIhreXGwe" role="2CJf0U">
+          <property role="Xl_RC" value="at.hafina.coupon.stamm.OrgPersonPerm" />
         </node>
       </node>
     </node>
@@ -2370,6 +2384,14 @@
       <node concept="2kzhL4" id="58L_rBVS1Qt" role="2kzgdm">
         <node concept="Xl_RD" id="58L_rBVS1Qu" role="il5_5">
           <property role="Xl_RC" value="Organisation zu Person bearbeiten" />
+        </node>
+      </node>
+    </node>
+    <node concept="il5_x" id="1ZFIhrf2ImR" role="2kzhMJ">
+      <property role="TrG5h" value="GuscheinAufladen" />
+      <node concept="2kzhL4" id="1ZFIhrf2ImS" role="2kzgdm">
+        <node concept="Xl_RD" id="1ZFIhrf2ImT" role="il5_5">
+          <property role="Xl_RC" value="Gutschein aufladen" />
         </node>
       </node>
     </node>
@@ -3718,6 +3740,84 @@
       <node concept="2TG9WX" id="58L_rBVU_5z" role="3OfFNq">
         <node concept="3Oe$u_" id="58L_rBVU_5$" role="3$nDjG">
           <ref role="3O0p26" node="7Id2iZPcC$d" resolve="status" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1jyGmW" id="1ZFIhre$f0d">
+    <property role="TrG5h" value="OrgPersonPerm" />
+    <node concept="2PePtf" id="1ZFIhre$f_7" role="2PKp_6">
+      <property role="TrG5h" value="Organizations" />
+      <node concept="1jyyp0" id="1ZFIhre$f_8" role="2PePtt">
+        <node concept="3clFbS" id="1ZFIhre$f_9" role="2VODD2">
+          <node concept="3SKdUt" id="1ZFIhre$fWj" role="3cqZAp">
+            <node concept="3SKdUq" id="1ZFIhre$fWk" role="3SKWNk">
+              <property role="3SKdUp" value="ein oder mehrere user " />
+            </node>
+          </node>
+          <node concept="3clFbF" id="1ZFIhre$g7D" role="3cqZAp">
+            <node concept="1odsa" id="1ZFIhre$g7B" role="3clFbG">
+              <ref role="1ods_" node="7Id2iZPcMug" resolve="OrganisationRepo" />
+              <ref role="37wK5l" node="58L_rBVr4jQ" resolve="findOrganisationenBySucheParams" />
+              <node concept="2ShNRf" id="1ZFIhre$glN" role="37wK5m">
+                <node concept="1pGfFk" id="1ZFIhre$gx0" role="2ShVmc">
+                  <ref role="37wK5l" node="58L_rBVr361" resolve="OrgSucheParams" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3uibUv" id="1ZFIhre$fLF" role="2PVZGo">
+        <ref role="3uigEE" node="7Id2iZPc_Oc" resolve="Organisation" />
+      </node>
+    </node>
+    <node concept="2PePtf" id="1ZFIhre$gM1" role="2PKp_6">
+      <property role="TrG5h" value="Personen" />
+      <node concept="1jyyp0" id="1ZFIhre$gM2" role="2PePtt">
+        <node concept="3clFbS" id="1ZFIhre$gM3" role="2VODD2">
+          <node concept="3SKdUt" id="1ZFIhre$gM4" role="3cqZAp">
+            <node concept="3SKdUq" id="1ZFIhre$gM5" role="3SKWNk">
+              <property role="3SKdUp" value="ein oder mehrere user " />
+            </node>
+          </node>
+          <node concept="3clFbF" id="1ZFIhre$gM6" role="3cqZAp">
+            <node concept="1odsa" id="1ZFIhre$gM7" role="3clFbG">
+              <ref role="1ods_" node="7Id2iZPcMug" resolve="OrganisationRepo" />
+              <ref role="37wK5l" node="58L_rBVQ_LE" resolve="findPersonBySuchParams" />
+              <node concept="2ShNRf" id="1ZFIhre$gM8" role="37wK5m">
+                <node concept="1pGfFk" id="1ZFIhre$gM9" role="2ShVmc">
+                  <ref role="37wK5l" node="58L_rBVr35p" resolve="PersonenSucheParams" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3uibUv" id="1ZFIhre$h6A" role="2PVZGo">
+        <ref role="3uigEE" node="7Id2iZPc9Y3" resolve="Person" />
+      </node>
+    </node>
+    <node concept="2RjHbW" id="1ZFIhre$f1k" role="2RjxEn">
+      <property role="TrG5h" value="ADMIN" />
+      <node concept="2RjIcg" id="1ZFIhre$f1l" role="2RjIad">
+        <node concept="3clFbS" id="1ZFIhre$f1m" role="2VODD2">
+          <node concept="3clFbF" id="1ZFIhre$f2U" role="3cqZAp">
+            <node concept="2OqwBi" id="1ZFIhre$f9n" role="3clFbG">
+              <node concept="liA8E" id="1ZFIhre$fgf" role="2OqNvi">
+                <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object):boolean" resolve="equals" />
+                <node concept="2OqwBi" id="1ZFIhre$f41" role="37wK5m">
+                  <node concept="2Rjrh3" id="1ZFIhre$f2T" role="2Oq$k0" />
+                  <node concept="liA8E" id="1ZFIhre$f6a" role="2OqNvi">
+                    <ref role="37wK5l" to="w7gk:4fBSqdHDY_k" resolve="getUserName" />
+                  </node>
+                </node>
+              </node>
+              <node concept="Xl_RD" id="1ZFIhre$fhw" role="2Oq$k0">
+                <property role="Xl_RC" value="daniels" />
+              </node>
+            </node>
+          </node>
         </node>
       </node>
     </node>
