@@ -15,6 +15,11 @@ Durch den Aufbau des Projektes werden vor allem
 Zur Diskussion zu stellen sind vor allem noch Anforderungen durch den Anwender / anwendende Organisation selbst. Gerade deren Feedback und Requirements in Bezug auf die Verwaltung von Gutscheinen und Personen sind systematisch zu integrieren. 
 
 
+
+
+
+
+
 # Aufbau und Ueberlegungen
 
 ![Image of System](./docu/system.jpeg)
