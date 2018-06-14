@@ -18,3 +18,5 @@ Zur Diskussion zu stellen sind vor allem noch Anforderungen durch den Anwender /
 # Aufbau und Ueberlegungen
 
 ![Image of System](./docu/system.jpeg)
+![Image of System 2](./docu/system2.jpeg)
+![Image of System 3](./docu/system3.jpeg)
