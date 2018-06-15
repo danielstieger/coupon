@@ -179,9 +179,6 @@
       <concept id="8009046666043401704" name="org.modellwerkstatt.objectflow.structure.ModelRepositoryMethod" flags="ig" index="wbJLE">
         <property id="8009046666043401713" name="methodType" index="wbJLN" />
       </concept>
-      <concept id="4338511869696968148" name="org.modellwerkstatt.objectflow.structure.OFXTestSuitDependentOption" flags="ng" index="zbZxr">
-        <reference id="4338511869696968277" name="test" index="zbZJq" />
-      </concept>
       <concept id="3875131616719432922" name="org.modellwerkstatt.objectflow.structure.CommandCallBasis" flags="ng" index="2_HltQ">
         <reference id="3875131616719438756" name="command" index="2_Hrw8" />
         <reference id="3875131616719438755" name="process" index="2_Hrwf" />
@@ -237,7 +234,6 @@
       </concept>
       <concept id="1335996842166371514" name="org.modellwerkstatt.objectflow.structure.OFXTestSuit" flags="ng" index="2WPaUQ">
         <reference id="1335996842166433049" name="configuration" index="2WPtWl" />
-        <child id="2884851879190335597" name="options" index="38MLOi" />
         <child id="6952410984685371541" name="content" index="3yMuLx" />
       </concept>
       <concept id="4533072425307715670" name="org.modellwerkstatt.objectflow.structure.StatusElement" flags="ng" index="2XvgOc">
@@ -2203,7 +2199,11 @@
       </node>
     </node>
     <node concept="3yPF9F" id="1ZFIhreoFuu" role="3yMuLx">
-      <property role="TrG5h" value="MPreis erstellt Organisation BlankBau" />
+      <property role="TrG5h" value="MPreis erstellt Organisation" />
+      <node concept="37vLTG" id="6oYSNJUU34p" role="3clF46">
+        <property role="TrG5h" value="name" />
+        <node concept="17QB3L" id="6oYSNJUU393" role="1tU5fm" />
+      </node>
       <node concept="10Oyi0" id="1ZFIhrfc$Gj" role="3clF45" />
       <node concept="3clFbS" id="1ZFIhreoFuy" role="3clF47">
         <node concept="3SKdUt" id="1ZFIhrephj$" role="3cqZAp">
@@ -2253,8 +2253,18 @@
                 </node>
                 <node concept="3clFbF" id="1ZFIhrfcBP9" role="3cqZAp">
                   <node concept="37vLTI" id="1ZFIhrfcBPa" role="3clFbG">
-                    <node concept="Xl_RD" id="1ZFIhrfcBPb" role="37vLTx">
-                      <property role="Xl_RC" value="info@blankbau.com" />
+                    <node concept="3cpWs3" id="6oYSNJUU3pf" role="37vLTx">
+                      <node concept="Xl_RD" id="6oYSNJUU3qp" role="3uHU7w">
+                        <property role="Xl_RC" value=".com" />
+                      </node>
+                      <node concept="3cpWs3" id="6oYSNJUU3mE" role="3uHU7B">
+                        <node concept="Xl_RD" id="1ZFIhrfcBPb" role="3uHU7B">
+                          <property role="Xl_RC" value="info@" />
+                        </node>
+                        <node concept="37vLTw" id="6oYSNJUU3na" role="3uHU7w">
+                          <ref role="3cqZAo" node="6oYSNJUU34p" resolve="name" />
+                        </node>
+                      </node>
                     </node>
                     <node concept="2OqwBi" id="1ZFIhrfcBPc" role="37vLTJ">
                       <node concept="3zknl8" id="1ZFIhrfcBPd" role="2Oq$k0">
@@ -2298,8 +2308,8 @@
                 </node>
                 <node concept="3clFbF" id="1ZFIhrfcC6V" role="3cqZAp">
                   <node concept="37vLTI" id="1ZFIhrfcC6W" role="3clFbG">
-                    <node concept="Xl_RD" id="1ZFIhrfcC6X" role="37vLTx">
-                      <property role="Xl_RC" value="BlankBau" />
+                    <node concept="37vLTw" id="6oYSNJUU3jX" role="37vLTx">
+                      <ref role="3cqZAo" node="6oYSNJUU34p" resolve="name" />
                     </node>
                     <node concept="2OqwBi" id="1ZFIhrfcC6Y" role="37vLTJ">
                       <node concept="3zknl8" id="1ZFIhrfcC6Z" role="2Oq$k0">
@@ -2388,10 +2398,18 @@
       </node>
     </node>
     <node concept="3yPF9F" id="1ZFIhrfc$tF" role="3yMuLx">
-      <property role="TrG5h" value="MPreis erstellt Admin User Walter fuer BlankBau" />
+      <property role="TrG5h" value="MPreis erstellt Admin User fuer Organisation" />
       <node concept="37vLTG" id="1ZFIhrfc$Hh" role="3clF46">
         <property role="TrG5h" value="orgId" />
         <node concept="10Oyi0" id="1ZFIhrfc$Hu" role="1tU5fm" />
+      </node>
+      <node concept="37vLTG" id="6oYSNJUU3uv" role="3clF46">
+        <property role="TrG5h" value="vor" />
+        <node concept="17QB3L" id="6oYSNJUU3xg" role="1tU5fm" />
+      </node>
+      <node concept="37vLTG" id="6oYSNJUU3yf" role="3clF46">
+        <property role="TrG5h" value="nach" />
+        <node concept="17QB3L" id="6oYSNJUU3_2" role="1tU5fm" />
       </node>
       <node concept="10Oyi0" id="1ZFIhrfc$H0" role="3clF45" />
       <node concept="3clFbS" id="1ZFIhrfc$tJ" role="3clF47">
@@ -2414,8 +2432,8 @@
                       <node concept="3clFbS" id="5KuDMQEk1_8" role="2VODD2">
                         <node concept="3clFbF" id="5KuDMQEk1_R" role="3cqZAp">
                           <node concept="37vLTI" id="5KuDMQEk1De" role="3clFbG">
-                            <node concept="Xl_RD" id="5KuDMQEk1DP" role="37vLTx">
-                              <property role="Xl_RC" value="Walter" />
+                            <node concept="37vLTw" id="6oYSNJUU3AB" role="37vLTx">
+                              <ref role="3cqZAo" node="6oYSNJUU3uv" resolve="vor" />
                             </node>
                             <node concept="2OqwBi" id="5KuDMQEk1Ae" role="37vLTJ">
                               <node concept="3zknl8" id="5KuDMQEk1_Q" role="2Oq$k0">
@@ -2429,8 +2447,8 @@
                         </node>
                         <node concept="3clFbF" id="5KuDMQEk1EY" role="3cqZAp">
                           <node concept="37vLTI" id="5KuDMQEk1EZ" role="3clFbG">
-                            <node concept="Xl_RD" id="5KuDMQEk1F0" role="37vLTx">
-                              <property role="Xl_RC" value="Blank" />
+                            <node concept="37vLTw" id="6oYSNJUU3E6" role="37vLTx">
+                              <ref role="3cqZAo" node="6oYSNJUU3yf" resolve="nach" />
                             </node>
                             <node concept="2OqwBi" id="5KuDMQEk1F1" role="37vLTJ">
                               <node concept="3zknl8" id="5KuDMQEk1F2" role="2Oq$k0">
@@ -2444,8 +2462,38 @@
                         </node>
                         <node concept="3clFbF" id="5KuDMQEk1M2" role="3cqZAp">
                           <node concept="37vLTI" id="5KuDMQEk1M3" role="3clFbG">
-                            <node concept="Xl_RD" id="5KuDMQEk1M4" role="37vLTx">
-                              <property role="Xl_RC" value="WB@glankbau.com" />
+                            <node concept="3cpWs3" id="6oYSNJUU568" role="37vLTx">
+                              <node concept="Xl_RD" id="6oYSNJUU58v" role="3uHU7w">
+                                <property role="Xl_RC" value=".com" />
+                              </node>
+                              <node concept="3cpWs3" id="6oYSNJUU4Xe" role="3uHU7B">
+                                <node concept="3cpWs3" id="6oYSNJUU4Qm" role="3uHU7B">
+                                  <node concept="3cpWs3" id="6oYSNJUU4M8" role="3uHU7B">
+                                    <node concept="3cpWs3" id="6oYSNJUU4GY" role="3uHU7B">
+                                      <node concept="37vLTw" id="6oYSNJUU4F$" role="3uHU7B">
+                                        <ref role="3cqZAo" node="6oYSNJUU3uv" resolve="vor" />
+                                      </node>
+                                      <node concept="Xl_RD" id="6oYSNJUU4H1" role="3uHU7w">
+                                        <property role="Xl_RC" value="." />
+                                      </node>
+                                    </node>
+                                    <node concept="37vLTw" id="6oYSNJUU4NZ" role="3uHU7w">
+                                      <ref role="3cqZAo" node="6oYSNJUU3yf" resolve="nach" />
+                                    </node>
+                                  </node>
+                                  <node concept="Xl_RD" id="6oYSNJUU4Qp" role="3uHU7w">
+                                    <property role="Xl_RC" value="@" />
+                                  </node>
+                                </node>
+                                <node concept="2OqwBi" id="6oYSNJUU51i" role="3uHU7w">
+                                  <node concept="3zknl8" id="6oYSNJUU4ZB" role="2Oq$k0">
+                                    <ref role="3zkmF1" node="5KuDMQEk1pJ" resolve="organisation" />
+                                  </node>
+                                  <node concept="2S8uIT" id="6oYSNJUU53t" role="2OqNvi">
+                                    <ref role="2S8YL0" to="x60x:7Id2iZPcBAp" resolve="name" />
+                                  </node>
+                                </node>
+                              </node>
                             </node>
                             <node concept="2OqwBi" id="5KuDMQEk1M5" role="37vLTJ">
                               <node concept="3zknl8" id="5KuDMQEk1M6" role="2Oq$k0">
@@ -2540,16 +2588,13 @@
     </node>
     <node concept="3yPF9F" id="1ZFIhrephm1" role="3yMuLx">
       <property role="TrG5h" value="MPreis erstellt 2 Karte für Organisation - nicht personifieziert, versendet" />
-      <node concept="3yABqi" id="1ZFIhrfc$Ig" role="3yGA3Q">
+      <node concept="37vLTG" id="6oYSNJV0izm" role="3clF46">
         <property role="TrG5h" value="orgId" />
-        <ref role="37wK5l" node="1ZFIhreoFuu" resolve="MPreis erstellt Organisation BlankBau" />
+        <node concept="10Oyi0" id="6oYSNJV0iBK" role="1tU5fm" />
       </node>
-      <node concept="3yABqi" id="1ZFIhrfc$K7" role="3yGA3Q">
-        <property role="TrG5h" value="adminUserId" />
-        <ref role="37wK5l" node="1ZFIhrfc$tF" resolve="MPreis erstellt Admin User Walter fuer BlankBau" />
-        <node concept="3zkua3" id="1ZFIhrfc_41" role="37wK5m">
-          <ref role="3zku8S" node="1ZFIhrfc$Ig" resolve="orgId" />
-        </node>
+      <node concept="37vLTG" id="6oYSNJV0hZV" role="3clF46">
+        <property role="TrG5h" value="kartennummer_1" />
+        <node concept="10Oyi0" id="6oYSNJV0i4M" role="1tU5fm" />
       </node>
       <node concept="10Oyi0" id="5KuDMQEHAo5" role="3clF45" />
       <node concept="3clFbS" id="1ZFIhrephm5" role="3clF47">
@@ -2564,8 +2609,8 @@
               <node concept="3clFbS" id="1ZFIhre$2r1" role="2VODD2">
                 <node concept="3clFbF" id="1ZFIhre$2Ax" role="3cqZAp">
                   <node concept="37vLTI" id="1ZFIhre$2HL" role="3clFbG">
-                    <node concept="3urNR4" id="1ZFIhrfc$Cc" role="37vLTx">
-                      <ref role="3cqZAo" node="1ZFIhre$6gl" resolve="KARTEN_NUMMER" />
+                    <node concept="37vLTw" id="6oYSNJV0imB" role="37vLTx">
+                      <ref role="3cqZAo" node="6oYSNJV0hZV" resolve="kartennummer_1" />
                     </node>
                     <node concept="2OqwBi" id="1ZFIhre$2AT" role="37vLTJ">
                       <node concept="3zknl8" id="1ZFIhre$2Av" role="2Oq$k0">
@@ -2584,8 +2629,8 @@
             <ref role="2_Hrwf" node="1ZFIhreoFMS" resolve="GutscheinProzess" />
             <ref role="2_Hrw8" node="1ZFIhrepho4" resolve="Gutschein erstellen" />
             <node concept="10Nm6u" id="1ZFIhre$2qa" role="2_HrWp" />
-            <node concept="3zkua3" id="1ZFIhrfc_xe" role="2_HrWp">
-              <ref role="3zku8S" node="1ZFIhrfc$Ig" resolve="orgId" />
+            <node concept="37vLTw" id="6oYSNJV0jdH" role="2_HrWp">
+              <ref role="3cqZAo" node="6oYSNJV0izm" resolve="orgId" />
             </node>
           </node>
         </node>
@@ -2605,8 +2650,8 @@
                       <node concept="3cmrfG" id="1ZFIhrfc_kM" role="3uHU7w">
                         <property role="3cmrfH" value="1" />
                       </node>
-                      <node concept="3urNR4" id="1ZFIhrfc_8C" role="3uHU7B">
-                        <ref role="3cqZAo" node="1ZFIhre$6gl" resolve="KARTEN_NUMMER" />
+                      <node concept="37vLTw" id="6oYSNJV0iqX" role="3uHU7B">
+                        <ref role="3cqZAo" node="6oYSNJV0hZV" resolve="kartennummer_1" />
                       </node>
                     </node>
                     <node concept="2OqwBi" id="1ZFIhrfc_8D" role="37vLTJ">
@@ -2626,8 +2671,8 @@
             <ref role="2_Hrwf" node="1ZFIhreoFMS" resolve="GutscheinProzess" />
             <ref role="2_Hrw8" node="1ZFIhrepho4" resolve="Gutschein erstellen" />
             <node concept="10Nm6u" id="1ZFIhrfc_8H" role="2_HrWp" />
-            <node concept="3zkua3" id="1ZFIhrfc_yU" role="2_HrWp">
-              <ref role="3zku8S" node="1ZFIhrfc$Ig" resolve="orgId" />
+            <node concept="37vLTw" id="6oYSNJV0jdJ" role="2_HrWp">
+              <ref role="3cqZAo" node="6oYSNJV0izm" resolve="orgId" />
             </node>
           </node>
         </node>
@@ -2644,8 +2689,8 @@
             <node concept="1odsa" id="1ZFIhrfcAmN" role="33vP2m">
               <ref role="1ods_" node="1ZFIhreoDWW" resolve="GutscheinRepo" />
               <ref role="37wK5l" node="1ZFIhrep_t$" resolve="findGutscheineToOrganisation" />
-              <node concept="3zkua3" id="1ZFIhrfcAz6" role="37wK5m">
-                <ref role="3zku8S" node="1ZFIhrfc$Ig" resolve="orgId" />
+              <node concept="37vLTw" id="6oYSNJV0jdM" role="37wK5m">
+                <ref role="3cqZAo" node="6oYSNJV0izm" resolve="orgId" />
               </node>
               <node concept="10Nm6u" id="1ZFIhrfcAqM" role="2f8TIa" />
             </node>
@@ -2684,18 +2729,33 @@
       <property role="TrG5h" value="Gutscheinkarte wird personalisiert, d.h. eine Person zugewiesen und aufgeladen." />
       <node concept="3yABqi" id="5KuDMQEHAnn" role="3yGA3Q">
         <property role="TrG5h" value="orgId" />
-        <ref role="37wK5l" node="1ZFIhreoFuu" resolve="MPreis erstellt Organisation BlankBau" />
+        <ref role="37wK5l" node="1ZFIhreoFuu" resolve="MPreis erstellt Organisation" />
+        <node concept="Xl_RD" id="6oYSNJUU67p" role="37wK5m">
+          <property role="Xl_RC" value="hilti" />
+        </node>
       </node>
       <node concept="3yABqi" id="5KuDMQEHAno" role="3yGA3Q">
         <property role="TrG5h" value="adminUserId" />
-        <ref role="37wK5l" node="1ZFIhrfc$tF" resolve="MPreis erstellt Admin User Walter fuer BlankBau" />
+        <ref role="37wK5l" node="1ZFIhrfc$tF" resolve="MPreis erstellt Admin User fuer Organisation" />
         <node concept="3zkua3" id="5KuDMQEHAnp" role="37wK5m">
           <ref role="3zku8S" node="5KuDMQEHAnn" resolve="orgId" />
+        </node>
+        <node concept="Xl_RD" id="6oYSNJUU69d" role="37wK5m">
+          <property role="Xl_RC" value="biml" />
+        </node>
+        <node concept="Xl_RD" id="6oYSNJUU6aA" role="37wK5m">
+          <property role="Xl_RC" value="baml" />
         </node>
       </node>
       <node concept="3yABqi" id="5KuDMQEHAnM" role="3yGA3Q">
         <property role="TrG5h" value="gutscheinId" />
         <ref role="37wK5l" node="1ZFIhrephm1" resolve="MPreis erstellt 2 Karte für Organisation - nicht personifieziert, versendet" />
+        <node concept="3zkua3" id="6oYSNJV0jkW" role="37wK5m">
+          <ref role="3zku8S" node="5KuDMQEHAnn" resolve="orgId" />
+        </node>
+        <node concept="3urNR4" id="6oYSNJV0joU" role="37wK5m">
+          <ref role="3cqZAo" node="1ZFIhre$6gl" resolve="KARTEN_NUMMER" />
+        </node>
       </node>
       <node concept="3cqZAl" id="5KuDMQEEiLl" role="3clF45" />
       <node concept="3clFbS" id="5KuDMQEEiEZ" role="3clF47">
@@ -2836,12 +2896,6 @@
         </node>
         <node concept="3clFbH" id="5KuDMQEHBHQ" role="3cqZAp" />
       </node>
-    </node>
-    <node concept="zbZxr" id="5KuDMQEbXcB" role="38MLOi">
-      <ref role="zbZJq" node="1ZFIhreoFuu" resolve="MPreis erstellt Organisation BlankBau" />
-    </node>
-    <node concept="zbZxr" id="5KuDMQEJdjd" role="38MLOi">
-      <ref role="zbZJq" node="1ZFIhrephm1" resolve="MPreis erstellt 2 Karte für Organisation - nicht personifieziert, versendet" />
     </node>
   </node>
   <node concept="3ugp7d" id="1ZFIhreoFMS">

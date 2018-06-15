@@ -176,6 +176,9 @@
         <property id="8614254524338490551" name="max" index="8tbpI" />
         <property id="8614254524338490550" name="min" index="8tbpJ" />
       </concept>
+      <concept id="1410680821326658964" name="org.modellwerkstatt.objectflow.structure.BPMetaReference" flags="ng" index="2dcwcJ">
+        <reference id="1410680821326658966" name="businessProperty" index="2dcwcH" />
+      </concept>
       <concept id="1440642197017487130" name="org.modellwerkstatt.objectflow.structure.StaticRessources" flags="ng" index="il5tC">
         <child id="3146313690717155086" name="labels" index="2kzhMJ" />
         <child id="3146313690715522546" name="platforms" index="2kDvpj" />
@@ -233,6 +236,7 @@
         <reference id="8484523473171384911" name="path" index="JpLXE" />
         <child id="8078003855688278894" name="expName" index="1o$Zrr" />
       </concept>
+      <concept id="1879461712355203928" name="org.modellwerkstatt.objectflow.structure.PageScopeConceptFunc" flags="ig" index="JX2Gw" />
       <concept id="4779674245203461929" name="org.modellwerkstatt.objectflow.structure.Scope" flags="ng" index="2PePtf">
         <child id="4779674245203461947" name="scopeFunc" index="2PePtt" />
         <child id="4779674245208419198" name="restricts" index="2PVZGo" />
@@ -347,6 +351,7 @@
       </concept>
       <concept id="7192042020163999174" name="org.modellwerkstatt.objectflow.structure.Page" flags="ng" index="3ugp7q">
         <reference id="4152417163565704942" name="boundClass" index="3gcvY6" />
+        <child id="1879461712355203936" name="scopeConceptFunc" index="JX2Go" />
         <child id="3887124829264538806" name="pagePaneActionProviderLink" index="3063Jp" />
         <child id="1881524139084590837" name="conclusion" index="10qiF9" />
         <child id="1881524139084590808" name="pageInit" index="10qiF$" />
@@ -364,6 +369,9 @@
         <reference id="5319621840368239244" name="testData" index="1vn1lH" />
       </concept>
       <concept id="594565203027877250" name="org.modellwerkstatt.objectflow.structure.Session" flags="ng" index="3y28L$" />
+      <concept id="5697903518443819883" name="org.modellwerkstatt.objectflow.structure.ScopeReference" flags="ng" index="3ymtp$">
+        <reference id="4779674245224959526" name="scope" index="2USPT0" />
+      </concept>
       <concept id="6952410984685067935" name="org.modellwerkstatt.objectflow.structure.OFXTestMethod" flags="ng" index="3yPF9F" />
       <concept id="5225022991485184063" name="org.modellwerkstatt.objectflow.structure.ViewObject" flags="ig" index="1YeyE5" />
     </language>
@@ -481,6 +489,10 @@
       </concept>
       <concept id="465568541573490181" name="org.modellwerkstatt.dataux.structure.IFOption" flags="ng" index="PoUSq" />
       <concept id="465568541573497275" name="org.modellwerkstatt.dataux.structure.SelectFirstFOption" flags="ng" index="PoWA$" />
+      <concept id="2019652483308169511" name="org.modellwerkstatt.dataux.structure.MenuCompoundAction" flags="ng" index="2TlDos">
+        <reference id="7763903944092773809" name="pageConclusion" index="3Umo0L" />
+        <child id="2019652483308170239" name="innerActions" index="2TlDj4" />
+      </concept>
       <concept id="3899779351686566801" name="org.modellwerkstatt.dataux.structure.DateTimeDelegate" flags="ng" index="2TG9WT" />
       <concept id="3899779351686566804" name="org.modellwerkstatt.dataux.structure.ReferenceDelegate" flags="ng" index="2TG9WW">
         <child id="465568541577805289" name="scopeText" index="P8nnQ" />
@@ -538,6 +550,7 @@
       <concept id="1203518072036" name="jetbrains.mps.baseLanguage.collections.structure.SmartClosureParameterDeclaration" flags="ig" index="Rh6nW" />
       <concept id="1160612413312" name="jetbrains.mps.baseLanguage.collections.structure.AddElementOperation" flags="nn" index="TSZUe" />
       <concept id="1165525191778" name="jetbrains.mps.baseLanguage.collections.structure.GetFirstOperation" flags="nn" index="1uHKPH" />
+      <concept id="1165595910856" name="jetbrains.mps.baseLanguage.collections.structure.GetLastOperation" flags="nn" index="1yVyf7" />
     </language>
   </registry>
   <node concept="34Athd" id="7Id2iZPc9Y3">
@@ -2501,19 +2514,42 @@
                   </node>
                 </node>
                 <node concept="1Wc70l" id="58L_rBVQ_Zg" role="3uHU7B">
-                  <node concept="2zQmTl" id="58L_rBVQ_Sn" role="3uHU7B">
-                    <node concept="3clFbC" id="58L_rBVQ_UW" role="2zQmTa">
-                      <node concept="2OqwBi" id="58L_rBVQ_Ww" role="3uHU7w">
-                        <node concept="37vLTw" id="58L_rBVQ_Vr" role="2Oq$k0">
-                          <ref role="3cqZAo" node="58L_rBVQ_OO" resolve="params" />
+                  <node concept="1Wc70l" id="6oYSNJUWNBU" role="3uHU7B">
+                    <node concept="2zQmTl" id="6oYSNJUWNE9" role="3uHU7B">
+                      <node concept="3clFbC" id="6oYSNJUWNOW" role="2zQmTa">
+                        <node concept="3_7ulE" id="6oYSNJUWNRi" role="3uHU7w">
+                          <ref role="3_688M" node="58L_rBVQ_Qv" />
+                          <ref role="2OG787" node="7Id2iZPcMsP" />
                         </node>
-                        <node concept="2S8uIT" id="58L_rBVQ_XG" role="2OqNvi">
-                          <ref role="2S8YL0" node="58L_rBVr35t" resolve="vorname" />
+                        <node concept="2OqwBi" id="6oYSNJUWNXS" role="3uHU7B">
+                          <node concept="2OqwBi" id="6oYSNJUWNIG" role="2Oq$k0">
+                            <node concept="37vLTw" id="6oYSNJUWNG3" role="2Oq$k0">
+                              <ref role="3cqZAo" node="58L_rBVQ_OO" resolve="params" />
+                            </node>
+                            <node concept="2S8uIT" id="6oYSNJUWNLr" role="2OqNvi">
+                              <ref role="2S8YL0" node="6oYSNJUWNjy" resolve="org" />
+                            </node>
+                          </node>
+                          <node concept="2S8uIT" id="6oYSNJUWO1d" role="2OqNvi">
+                            <ref role="2S8YL0" node="7Id2iZPcB_X" resolve="id" />
+                          </node>
                         </node>
                       </node>
-                      <node concept="3_7ulE" id="58L_rBVQ_Tn" role="3uHU7B">
-                        <ref role="3_688M" node="58L_rBVQ_Qv" />
-                        <ref role="2OG787" node="7Id2iZPcMoz" />
+                    </node>
+                    <node concept="2zQmTl" id="58L_rBVQ_Sn" role="3uHU7w">
+                      <node concept="3clFbC" id="58L_rBVQ_UW" role="2zQmTa">
+                        <node concept="2OqwBi" id="58L_rBVQ_Ww" role="3uHU7w">
+                          <node concept="37vLTw" id="58L_rBVQ_Vr" role="2Oq$k0">
+                            <ref role="3cqZAo" node="58L_rBVQ_OO" resolve="params" />
+                          </node>
+                          <node concept="2S8uIT" id="58L_rBVQ_XG" role="2OqNvi">
+                            <ref role="2S8YL0" node="58L_rBVr35t" resolve="vorname" />
+                          </node>
+                        </node>
+                        <node concept="3_7ulE" id="58L_rBVQ_Tn" role="3uHU7B">
+                          <ref role="3_688M" node="58L_rBVQ_Qv" />
+                          <ref role="2OG787" node="7Id2iZPcMoz" />
+                        </node>
                       </node>
                     </node>
                   </node>
@@ -2535,6 +2571,9 @@
                   </node>
                 </node>
               </node>
+            </node>
+            <node concept="GVA6h" id="6oYSNJUZhqn" role="GVuqE">
+              <ref role="GVA6j" node="5KuDMQEbY_a" />
             </node>
           </node>
         </node>
@@ -2735,6 +2774,14 @@
         </node>
       </node>
     </node>
+    <node concept="il5_x" id="6oYSNJUU6PO" role="2kzhMJ">
+      <property role="TrG5h" value="PersonHinzufuegen" />
+      <node concept="2kzhL4" id="6oYSNJUU6PP" role="2kzgdm">
+        <node concept="Xl_RD" id="6oYSNJUU6PQ" role="il5_5">
+          <property role="Xl_RC" value="Person hinzufuegen" />
+        </node>
+      </node>
+    </node>
     <node concept="2kDv1q" id="7Id2iZPcPao" role="2kDvpj">
       <property role="TrG5h" value="FX8" />
       <node concept="3hNl9M" id="7Id2iZPcPaq" role="3hNl4o">
@@ -2762,6 +2809,17 @@
     <ref role="3lhHOO" node="7Id2iZPcCEw" resolve="OrganisationsProzess" />
     <node concept="10EhbA" id="58L_rBVqVJ3" role="3vkzKj">
       <ref role="10EhbB" node="7Id2iZPcCE_" resolve="organisation" />
+    </node>
+    <node concept="2OqwBi" id="6oYSNJUWOwK" role="3vkzKj">
+      <node concept="2OqwBi" id="6oYSNJUWOpo" role="2Oq$k0">
+        <node concept="10EhbA" id="6oYSNJUWOot" role="2Oq$k0">
+          <ref role="10EhbB" node="7Id2iZPcCE_" resolve="organisation" />
+        </node>
+        <node concept="2S8uIT" id="6oYSNJUWOrd" role="2OqNvi">
+          <ref role="2S8YL0" node="7Id2iZPcBBO" resolve="personen" />
+        </node>
+      </node>
+      <node concept="1yVyf7" id="6oYSNJUWOEO" role="2OqNvi" />
     </node>
     <node concept="27Aftt" id="58L_rBVqVFx" role="27AfA_">
       <node concept="35AVbj" id="58L_rBVqVG1" role="27Af65">
@@ -3636,6 +3694,28 @@
       <node concept="3063JU" id="58L_rBVQ$3l" role="3063Jp">
         <ref role="3063JT" node="58L_rBVr3w_" resolve="PersonenSucheFilter" />
       </node>
+      <node concept="JX2Gw" id="6oYSNJUZh2_" role="JX2Go">
+        <node concept="3clFbS" id="6oYSNJUZh2A" role="2VODD2">
+          <node concept="3clFbF" id="6oYSNJUZh3A" role="3cqZAp">
+            <node concept="2OqwBi" id="6oYSNJUZhbd" role="3clFbG">
+              <node concept="2OqwBi" id="6oYSNJUZh41" role="2Oq$k0">
+                <node concept="3urNR4" id="6oYSNJUZh3_" role="2Oq$k0">
+                  <ref role="3cqZAo" node="58L_rBVQ$5x" resolve="params" />
+                </node>
+                <node concept="2dcwcJ" id="6oYSNJUZh9h" role="2OqNvi">
+                  <ref role="2dcwcH" node="6oYSNJUWNjy" resolve="org" />
+                </node>
+              </node>
+              <node concept="liA8E" id="6oYSNJUZhhO" role="2OqNvi">
+                <ref role="37wK5l" to="28jr:3_EaJyvi4d8" resolve="setScope" />
+                <node concept="3ymtp$" id="6oYSNJUZhj7" role="37wK5m">
+                  <ref role="2USPT0" node="1ZFIhre$f_7" resolve="Organizations" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
     </node>
     <node concept="3ugp7q" id="58L_rBVQ_0w" role="3ug97V">
       <property role="TrG5h" value="Page_1" />
@@ -3710,6 +3790,25 @@
   <node concept="1YeyE5" id="58L_rBVr35m">
     <property role="TrG5h" value="PersonenSucheParams" />
     <property role="3GE5qa" value="DATA" />
+    <node concept="1bOX9e" id="6oYSNJUWNjy" role="TxmiU">
+      <property role="2RkwnN" value="org" />
+      <node concept="3Tm1VV" id="6oYSNJUWNjC" role="1B3o_S" />
+      <node concept="2RoN1w" id="6oYSNJUWNjD" role="2RnVtd">
+        <node concept="3wEZqW" id="6oYSNJUWNjE" role="3wFrgM" />
+        <node concept="3xqBd$" id="6oYSNJUWNjF" role="3xrYvX">
+          <node concept="3Tm1VV" id="6oYSNJUWNjH" role="3xqFEP" />
+        </node>
+      </node>
+      <node concept="3uibUv" id="6oYSNJUWNkS" role="2RkE6I">
+        <ref role="3uigEE" node="7Id2iZPc_Oc" resolve="Organisation" />
+      </node>
+      <node concept="Xl_RD" id="6oYSNJUWNlD" role="2CNmdP">
+        <property role="Xl_RC" value="Org" />
+      </node>
+      <node concept="Xl_RD" id="6oYSNJUWNlR" role="2CNmdL">
+        <property role="Xl_RC" value="Organisation" />
+      </node>
+    </node>
     <node concept="3Tm1VV" id="58L_rBVr35o" role="1B3o_S" />
     <node concept="3clFbW" id="58L_rBVr35p" role="jymVt">
       <node concept="3cqZAl" id="58L_rBVr35q" role="3clF45" />
@@ -3907,6 +4006,17 @@
       <property role="TrG5h" value="#" />
       <ref role="1Tjo7l" node="58L_rBVr35m" resolve="PersonenSucheParams" />
       <node concept="2U5nhG" id="58L_rBVr3wE" role="2TFpq_" />
+      <node concept="2TG9WW" id="6oYSNJUWNmU" role="3OfFNq">
+        <node concept="P8lqc" id="6oYSNJUWNmV" role="P8nnQ">
+          <node concept="3Oe$u_" id="6oYSNJUWNok" role="P8WsX">
+            <ref role="3O0p26" node="7Id2iZPcBAp" resolve="name" />
+          </node>
+        </node>
+        <node concept="3Oe$u_" id="6oYSNJUWNmW" role="3$nDjG">
+          <ref role="3O0p26" node="6oYSNJUWNjy" resolve="org" />
+        </node>
+        <node concept="P9Rn5" id="6oYSNJUWNpt" role="PoUSh" />
+      </node>
       <node concept="3Oe2Ik" id="58L_rBVr3wV" role="3OfFNq">
         <node concept="3Oe$u_" id="58L_rBVr3wW" role="3$nDjG">
           <ref role="3O0p26" node="58L_rBVr35t" resolve="vorname" />
@@ -3950,6 +4060,28 @@
               <ref role="2IFZ7r" node="7Id2iZPc9Y3" resolve="Person" />
             </node>
             <node concept="WNRgn" id="58L_rBVQ_kZ" role="2OqNvi">
+              <ref role="WNRgg" node="7Id2iZPcA45" resolve="organisation" />
+            </node>
+          </node>
+        </node>
+        <node concept="2TlDos" id="6oYSNJUU6G0" role="fOGQ8">
+          <ref role="2_Hrwf" node="7Id2iZPcCEw" resolve="OrganisationsProzess" />
+          <ref role="2_Hrw8" node="58L_rBVqM3h" resolve="Organisation bearbeiten" />
+          <ref role="3Umo0L" node="58L_rBVqVA8" resolve="Save" />
+          <ref role="3uz5Vf" node="6oYSNJUU6PO" resolve="PersonHinzufuegen" />
+          <node concept="2TlDos" id="6oYSNJUU6Lp" role="2TlDj4">
+            <ref role="2_Hrwf" node="7Id2iZPcCEw" resolve="OrganisationsProzess" />
+            <ref role="2_Hrw8" node="58L_rBVqMeZ" resolve="Person erstellen" />
+            <node concept="2IFXgM" id="6oYSNJUU6MP" role="2_HrWp">
+              <ref role="2IFZ7r" node="7Id2iZPc_Oc" resolve="Organisation" />
+            </node>
+          </node>
+          <node concept="10Nm6u" id="6oYSNJUU6GR" role="2_HrWp" />
+          <node concept="2OqwBi" id="6oYSNJUU6I_" role="2_HrWp">
+            <node concept="2IFXgM" id="6oYSNJUU6Hp" role="2Oq$k0">
+              <ref role="2IFZ7r" node="7Id2iZPc9Y3" resolve="Person" />
+            </node>
+            <node concept="WNRgn" id="6oYSNJUU6Kc" role="2OqNvi">
               <ref role="WNRgg" node="7Id2iZPcA45" resolve="organisation" />
             </node>
           </node>
