@@ -100,10 +100,6 @@
       <concept id="1146644623116" name="jetbrains.mps.baseLanguage.structure.PrivateVisibility" flags="nn" index="3Tm6S6" />
     </language>
     <language id="ec097fca-5b84-41f2-847d-6a5690cae277" name="org.modellwerkstatt.objectflow">
-      <concept id="3526396426289727497" name="org.modellwerkstatt.objectflow.structure.OFXConfigPropOverwrite" flags="ng" index="26L8Vk">
-        <reference id="3526396426289727551" name="property" index="26L8Vy" />
-        <child id="3526396426289727549" name="value" index="26L8Vw" />
-      </concept>
       <concept id="3875131616719432922" name="org.modellwerkstatt.objectflow.structure.CommandCallBasis" flags="ng" index="2_HltQ">
         <reference id="3875131616719438756" name="command" index="2_Hrw8" />
         <reference id="3875131616719438755" name="process" index="2_Hrwf" />
@@ -119,7 +115,6 @@
       </concept>
       <concept id="478945708907022307" name="org.modellwerkstatt.objectflow.structure.OFXConfigInclude" flags="ng" index="2CJ4_Q">
         <reference id="478945708907022310" name="element" index="2CJ4_N" />
-        <child id="478945708912703715" name="properties" index="2CPvpQ" />
       </concept>
       <concept id="478945708907003617" name="org.modellwerkstatt.objectflow.structure.OFXConfigConstructorArg" flags="ng" index="2CJf1O">
         <child id="478945708935709196" name="value" index="2DqwMp" />
@@ -342,19 +337,7 @@
       </node>
     </node>
     <node concept="2CJ4_Q" id="7Id2iZPcOSj" role="2CGBMS">
-      <ref role="2CJ4_N" to="es3z:7Id2iZPcONe" resolve="FatPooledSource" />
-      <node concept="26L8Vk" id="7Id2iZPcOUW" role="2CPvpQ">
-        <ref role="26L8Vy" to="es3z:4LC0Y0L2paC" resolve="user" />
-        <node concept="Xl_RD" id="7Id2iZPcOUX" role="26L8Vw">
-          <property role="Xl_RC" value="reko" />
-        </node>
-      </node>
-      <node concept="26L8Vk" id="7Id2iZPcOV3" role="2CPvpQ">
-        <ref role="26L8Vy" to="es3z:4LC0Y0L2paE" resolve="password" />
-        <node concept="Xl_RD" id="7Id2iZPcOV4" role="26L8Vw">
-          <property role="Xl_RC" value="test" />
-        </node>
-      </node>
+      <ref role="2CJ4_N" to="es3z:1YSLAaB7g1l" resolve="MySQLSource" />
     </node>
     <node concept="2CJ4_Q" id="7Id2iZPcOTT" role="2CGBMS">
       <ref role="2CJ4_N" to="es3z:7Id2iZPcOJm" resolve="BasicInfra" />

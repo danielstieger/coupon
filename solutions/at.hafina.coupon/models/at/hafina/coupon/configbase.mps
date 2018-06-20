@@ -23,6 +23,7 @@
         <child id="478945708935709196" name="value" index="2DqwMp" />
         <child id="478945708935709194" name="type" index="2DqwMv" />
       </concept>
+      <concept id="478945708907003626" name="org.modellwerkstatt.objectflow.structure.IOFXConfigInstanceElement" flags="ng" index="2CJf1Z" />
       <concept id="478945708907003466" name="org.modellwerkstatt.objectflow.structure.OFXConfigInstance" flags="ng" index="2CJf3v">
         <child id="478945708907022272" name="elements" index="2CJ4_l" />
         <child id="478945708907003567" name="className" index="2CJf0U" />
@@ -212,6 +213,86 @@
           <property role="Xl_RC" value="org.modellwerkstatt.objectflow.ObjectFlowRT.UserEnvironmentInformation" />
         </node>
       </node>
+    </node>
+    <node concept="2CPvp3" id="1YSLAaB7fYG" role="2CGBMS" />
+    <node concept="2CJoq6" id="1YSLAaB7g1l" role="2CGBMS">
+      <property role="TrG5h" value="MySQLSource" />
+      <node concept="2CJf3v" id="1YSLAaB7g2X" role="2CJdiS">
+        <property role="TrG5h" value="transactionDefinition" />
+        <node concept="2CJ4$C" id="1YSLAaB7g2Y" role="2CJ4_l">
+          <property role="TrG5h" value="propagationBehaviorName" />
+          <node concept="Xl_RD" id="1YSLAaB7g2Z" role="2CaGCA">
+            <property role="Xl_RC" value="PROPAGATION_REQUIRES_NEW" />
+          </node>
+        </node>
+        <node concept="2CJ4$C" id="1YSLAaB7g30" role="2CJ4_l">
+          <property role="TrG5h" value="isolationLevelName" />
+          <node concept="Xl_RD" id="1YSLAaB7g31" role="2CaGCA">
+            <property role="Xl_RC" value="ISOLATION_READ_COMMITTED" />
+          </node>
+        </node>
+        <node concept="2CJ4$C" id="1YSLAaB7g32" role="2CJ4_l">
+          <property role="TrG5h" value="timeout" />
+          <node concept="Xl_RD" id="1YSLAaB7g33" role="2CaGCA">
+            <property role="Xl_RC" value="5000" />
+          </node>
+        </node>
+        <node concept="Xl_RD" id="1YSLAaB7g34" role="2CJf0U">
+          <property role="Xl_RC" value="org.springframework.transaction.support.DefaultTransactionDefinition" />
+        </node>
+      </node>
+      <node concept="2CPvp3" id="1YSLAaB7g35" role="2CJdiS" />
+      <node concept="2CJf3v" id="1YSLAaB7g36" role="2CJdiS">
+        <property role="TrG5h" value="transactionManager" />
+        <node concept="Xl_RD" id="1YSLAaB7g37" role="2CJf0U">
+          <property role="Xl_RC" value="org.springframework.jdbc.datasource.DataSourceTransactionManager" />
+        </node>
+        <node concept="2CJ4$C" id="1YSLAaB7g38" role="2CJ4_l">
+          <property role="2DlMY1" value="true" />
+          <property role="TrG5h" value="dataSource" />
+          <node concept="Xl_RD" id="1YSLAaB7g39" role="2CaGCA">
+            <property role="Xl_RC" value="dataSource" />
+          </node>
+        </node>
+        <node concept="2CJf1Z" id="1YSLAaB7ga5" role="2CJ4_l" />
+      </node>
+      <node concept="2CJf3v" id="1YSLAaB7g8h" role="2CJdiS">
+        <property role="TrG5h" value="dataSource" />
+        <node concept="Xl_RD" id="1YSLAaB7g8l" role="2CJf0U">
+          <property role="Xl_RC" value="org.springframework.jdbc.datasource.DriverManagerDataSource" />
+        </node>
+        <node concept="2CJ4$C" id="1YSLAaB7g8u" role="2CJ4_l">
+          <property role="TrG5h" value="driverClassName" />
+          <node concept="Xl_RD" id="1YSLAaB7g8v" role="2CaGCA">
+            <property role="Xl_RC" value="com.mysql.cj.jdbc.Driver" />
+          </node>
+        </node>
+        <node concept="2CJ4$C" id="1YSLAaB7g8w" role="2CJ4_l">
+          <property role="TrG5h" value="url" />
+          <node concept="Xl_RD" id="1YSLAaB7g8x" role="2CaGCA">
+            <property role="Xl_RC" value="jdbc:mysql://localhost/test?useUnicode=true&amp;amp;useJDBCCompliantTimezoneShift=true&amp;amp;useLegacyDatetimeCode=false&amp;amp;serverTimezone=UTC" />
+          </node>
+        </node>
+        <node concept="2CJ4$C" id="1YSLAaB7g8$" role="2CJ4_l">
+          <property role="TrG5h" value="username" />
+          <node concept="Xl_RD" id="1YSLAaB7g8_" role="2CaGCA">
+            <property role="Xl_RC" value="root" />
+          </node>
+        </node>
+        <node concept="2CJ4$C" id="1YSLAaB7g8A" role="2CJ4_l">
+          <property role="TrG5h" value="password" />
+          <node concept="Xl_RD" id="1YSLAaB7g8B" role="2CaGCA" />
+        </node>
+      </node>
+      <node concept="2CPvp3" id="1YSLAaB7g4m" role="2CJdiS" />
+      <node concept="2CJf3v" id="1YSLAaBApt2" role="2CJdiS">
+        <property role="TrG5h" value="databaseDescription" />
+        <node concept="Xl_RD" id="1YSLAaBApt4" role="2CJf0U">
+          <property role="Xl_RC" value="org.modellwerkstatt.manmap.solution.manmapRT.MMMySqlDescription" />
+        </node>
+      </node>
+      <node concept="2CPvp3" id="1YSLAaB7g4R" role="2CJdiS" />
+      <node concept="2CPvp3" id="1YSLAaB7g5p" role="2CJdiS" />
     </node>
     <node concept="2CJoq6" id="7Id2iZPcOJm" role="2CGBMS">
       <property role="TrG5h" value="BasicInfra" />

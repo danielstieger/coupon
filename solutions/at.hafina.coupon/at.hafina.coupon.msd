@@ -4,7 +4,13 @@
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot location="models" />
     </modelRoot>
+    <modelRoot contentPath="${APPHome}/coupon/jars" type="java_classes">
+      <sourceRoot location="mysql-connector-java-8.0.11.jar" />
+    </modelRoot>
   </models>
+  <stubModelEntries>
+    <stubModelEntry path="${APPHome}/coupon/jars/mysql-connector-java-8.0.11.jar" />
+  </stubModelEntries>
   <sourcePath />
   <dependencies>
     <dependency reexport="false">37fdf88a-1025-4d01-864a-0bf987f72e6f(org.modellwerkstatt.manmap.solution)</dependency>
